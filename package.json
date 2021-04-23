@@ -1,0 +1,24 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "open http://localhost:4000 & nodemon server.js",
+    "devw": "wsl-open http://localhost:4000 & nodemon server.js"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/ronnellvjr/project1.git"
+  },
+  "author": "Ronnell Valdez // Ben Dazey",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
