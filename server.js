@@ -25,4 +25,3 @@ app.use(express.urlencoded({ extended: true }));
 app.listen(PORT, function () {
 	console.log(`Blog application is live at http://localhost:${PORT}/`);
 });
-
