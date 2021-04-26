@@ -9,7 +9,9 @@ const controllers = require("./controllers");
 const app = express();
 
 /* ==== Configuration ==== */
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
+require('dotenv').config();
+
 
 app.set("view engine", "ejs");
 
@@ -20,12 +22,19 @@ app.use(express.urlencoded({ extended: true }));
 // method override middleware
 // app.use(methodOverride("_method"));
 
-//HOME ROUTE
+// HOME ROUTE
 app.get("/", function (req, res) {
 	res.render("index");
 });
 
+// Other Routes
+app.use("/", controllers.findmyplant)
+
+
+
 /* ==== Server Listener ==== */
 app.listen(PORT, function () {
-	console.log(`Blog application is live at http://localhost:${PORT}/`);
+	console.log(`Plant website is live at http://localhost:${PORT}/`);
 });
+
+app.use("/", controllers.findmyplant)
