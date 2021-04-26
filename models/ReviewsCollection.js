@@ -2,13 +2,8 @@ const mongoose = require("mongoose");
 
 const reviewSchema = new mongoose.Schema(
 	{
-		name: { type: String, required: true, minLength: 1 },
-		description: { type: String, required: true, minLength: 1 },
-		light: { type: int, required: true, default: 0 },
-        //temp: { type: int, required: true, default: 0},
-        price: { type: int, required: true, default: 0},
+		comment: { type: String, required: true, minLength: 1 },
         rating: { type: int, default: 0}, //will be updated with every review in array
-        reviews: [Review]
 	},
 	{ timestamps: true }
 );
