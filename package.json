@@ -8,7 +8,6 @@
     "start": "node server.js",
     "dev": "open http://localhost:4000 & nodemon server.js",
     "devw": "wsl-open http://localhost:4000 & nodemon server.js"
-    
   },
   "repository": {
     "type": "git",
@@ -19,6 +18,7 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
+    "mongoose": "^5.12.5",
     "nodemon": "^2.0.7"
   }
 }
