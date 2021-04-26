@@ -24,5 +24,5 @@ mongoose.connection.on('error', (err) => {
 // Import models and then export them so all modules/files
 // can have access to all models through this file
 module.exports = {
-  Project1: require('./PlantsCollections.js'),
+  PlantsCollections: require('./PlantsCollections.js'),
 };
