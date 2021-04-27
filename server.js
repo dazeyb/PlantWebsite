@@ -9,8 +9,8 @@ const controllers = require("./controllers");
 const app = express();
 
 /* ==== Configuration ==== */
-const PORT = process.env.PORT || 4000;
 require('dotenv').config();
+const PORT = process.env.PORT || 4000;
 
 
 app.set("view engine", "ejs");
