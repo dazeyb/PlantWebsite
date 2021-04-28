@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="./findmyplanttest.css">
+    <link rel="stylesheet" href="/styles/findmyplant.css">
 
 
 <head>
@@ -20,7 +20,12 @@
 
             <a href="">1</a>
             <a href="">2</a>
-            <input type="checkbox" value="Search" label="label"/>
+            <form>
+
+              <input type="text" placeholder="Plant Name" label="label"/>
+              <input type="submit" value="Go">
+
+            </form>
 
       </header>
 
@@ -29,7 +34,13 @@
       </aside>
     
       <article>
-        Article
+        <ul>
+          <% plants.forEach(plant => { %>
+          <li>
+              <a href="/show/<%= plant._id %>"> <%= plant.name %></a>
+          </li>
+          <% })%>
+        </ul>
       </article>
 
       
