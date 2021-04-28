@@ -37,6 +37,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Other Routes
 app.use("/", controllers.findmyplant)
+app.use("/:id", controllers.show)
 
 
 
