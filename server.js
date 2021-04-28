@@ -13,8 +13,6 @@ const db =require("./models");
 /* ==== Configuration ==== */
 require('dotenv').config();
 const PORT = process.env.PORT || 4000;
-//const PORT = 4000;
-
 
 
 app.set("view engine", "ejs");
