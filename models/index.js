@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 
 // our db will be called Project1-db
 // const connectionString = 'mongodb://localhost:27017/Project1-db';
+require('dotenv').config();
+
 const connectionString = process.env.MONGODB_URI;
 
 mongoose.connect(connectionString, { 

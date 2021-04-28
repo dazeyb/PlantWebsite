@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find My Plant</title>
+</head>
+<body>
+    <main>
+        <h2>List of articles</h2>
+
+        <% if(!plants.length) { %>
+        <p>There are no articles available yet.</p>
+        <% } %>
+
+        <ul>
+            <% plants.forEach(plant => { %>
+            <li>
+                <a href="/show/<%= plant._id %>"> <%= plant.name %></a>
+            </li>
+            <% })%>
+        </ul>
+    </main>
+
+</body>
+</html>
