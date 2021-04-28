@@ -25,7 +25,7 @@ const plants = [
     price: 4,
     },
 
-    {name: "Basil", 
+    {name: "Lucky Bamboo", 
     description: 'Dracaena sanderiana is a species of flowering plant in the family Asparagaceae, native to Central Africa. It was named after the German–English gardener Henry Frederick Conrad Sander. The plant is commonly marketed as "lucky bamboo".',
     light: 2,
     price: 18,
