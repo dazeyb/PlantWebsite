@@ -1,5 +1,5 @@
 module.exports = {
 	findmyplant: require("./findmyplant"),
-	// auth: require("./auth")
+	// plants: require(".plants/plant")
 };
 
