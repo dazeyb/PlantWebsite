@@ -7,16 +7,26 @@
     <title>ShowPageWorking</title>
 </head>
 <body>
-    <h2>Find Your Plant</h2>
-
-      <form action="" method="GET">
-        <input type="text" name="name" placeholder="Name" />
-        <input type="submit" value="Search" />
-      </form>
-      <a href="/show">Clear Search</a>
-
-      <% if(!plantsCollections.length) { %>
-      <p>There are no plants that fit this criteria</p>
-      <% } %>
+  <header>
+    <h1>Show Page for <%=Plants.name%></h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/authors">Author Index</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Author Attributes:</h2>
+      <ul>
+        <li>Name: <%=Plants.name%></li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
