@@ -4,9 +4,11 @@ const express = require("express");
 
 /* ==== Internal Modules ==== */
 const controllers = require("./controllers");
+const { PlantsCollections } = require("./models");
 
 /* ==== Instanced Modules ==== */
 const app = express();
+const db =require("./models");
 
 /* ==== Configuration ==== */
 require('dotenv').config();
@@ -25,9 +27,14 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(methodOverride("_method"));
 
 // HOME ROUTE
-app.get("/", function (req, res) {
-	res.render("index");
-});
+// app.get("/", function (req, res) {
+// 	res.render("index");
+// });
+
+// //Show
+// const plantsController = require('./controllers/plants.js');
+// app.use('/plants', plantsController);
+
 
 // Other Routes
 app.use("/", controllers.findmyplant)
