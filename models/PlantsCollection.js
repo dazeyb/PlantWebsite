@@ -7,7 +7,7 @@ const plantsSchema = new mongoose.Schema(
 		light: { type: Number },
         //temp: { type: int, required: true, default: 0},
         price:  { type: Number },
-        rating: { type: Number }, //will be updated with every review in array
+        rating: { type: Number, default: 3 }, //will be updated with every review in array
         reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: "ReviewsCollection" }]
 	},
 	{ timestamps: true }
