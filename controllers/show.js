@@ -28,27 +28,40 @@ router.get("/:id", function (req, res) {
 });
 
 
-
+// This allows us to create comments and post them to the page/database
 router.post("/:id", function (req, res) {
 	db.ReviewsCollection.create(req.body, function (err, createdReview) {
 		if (err) return res.send(err);
 		console.log(createdReview);
 
-		// allows us to add an article to the author
-		//.exec short for execute. used to help stack functions. similar to .then. after this query, exectute this one!
 		db.PlantsCollection.findById(req.params.id,function (err, foundPlant) {
 			if (err) return res.send(err);
 
-			// update the author articles array
-			foundPlant.reviews.push(createdReview); // adds article to the author
+			foundPlant.reviews.push(createdReview); 
 			foundPlant.save(); // save relationship to database, commits to memory
 
 			return res.redirect(`/show/${req.params.id}`);
 		});
 	});
 });
-    // router.get('/', function (req, res){
-  //    
-  // });
+
+
+// This sets up our page so comments can be deleted from the database
+router.delete('/:id', (req, res)=>{
+	db.ReviewsCollection.findByIdAndRemove(req.params.id, (err, deletedReview)=>{
+	  db.PlantsCollection.findOne({'comment': req.params.id}, (err, foundPlant) => {
+		   if(err){
+			  res.send(err);
+			} else {
+			  foundPlant.reviews.remove(req.params.id);
+			  foundPlant.save((err, updatedReview) => {
+				console.log(`Deleted ${updatedReview}`);
+				res.redirect(`/show/${req.params.id}`);
+			  })
+			}
+	  })
+	});
+});
   
+
     module.exports = router;

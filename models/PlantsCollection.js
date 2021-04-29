@@ -4,10 +4,10 @@ const plantsSchema = new mongoose.Schema(
 	{
 		name: { type: String, required: true, minLength: 1 },
 		description: { type: String, required: true, minLength: 1 },
-		light: {Number, default: 0},
+		light: { type: Number },
         //temp: { type: int, required: true, default: 0},
-        price:  {Number, default: 0},
-        rating: {Number, default: 0}, //will be updated with every review in array
+        price:  { type: Number },
+        rating: { type: Number }, //will be updated with every review in array
         reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: "ReviewsCollection" }]
 	},
 	{ timestamps: true }

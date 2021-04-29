@@ -35,10 +35,11 @@
         <li>Price: <%=Plant.price%></li>
         <li>Rating: <%=Plant.rating%></li>
         <li>Description: <%=Plant.description%></li>
+        
         <li>Comments: </li>
-        <% Plant.reviews.forEach(review => { %>
-          <% console.log(review) %>
-          <li><%=review.comment%></li>
+        <% Plant.reviews.forEach(review => { %>   <% console.log(review) %>
+        
+        <li><%=review.comment%></li>
           
           
           <%})%>
@@ -50,6 +51,10 @@
         <input name="comment" type="string" placeholder="Comments"/>
         <input type="submit" value="Submit"/>
       </form>
+
+      <form action="/show/<%= Plant._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Comment" />
+    </form>
 
     </section>
   </main>
