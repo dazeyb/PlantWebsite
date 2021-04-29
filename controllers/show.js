@@ -48,20 +48,20 @@ router.post("/:id", function (req, res) {
 
 // This sets up our page so comments can be deleted from the database
 router.delete('/:id', (req, res)=>{
+	//This will remove from Reviews, and by association remove it from from PlantsCollection as well
 	db.ReviewsCollection.findByIdAndRemove(req.params.id, (err, deletedReview)=>{
-	  db.PlantsCollection.findOne({'comment': req.params.id}, (err, foundPlant) => {
-		   if(err){
-			  res.send(err);
-			} else {
-			  foundPlant.reviews.remove(req.params.id);
-			  foundPlant.save((err, updatedReview) => {
-				console.log(`Deleted ${updatedReview}`);
+		if(err){
+			console.log(err);
+			return res.send("Server Error :(")
+
+		} else {
 				res.redirect(`/show/${req.params.id}`);
-			  })
-			}
-	  })
-	});
+				console.log(`Deleted comment ${deletedReview}`);
+			  
+		}
+	})
 });
+
   
 
-    module.exports = router;
+module.exports = router;
