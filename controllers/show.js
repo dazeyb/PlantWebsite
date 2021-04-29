@@ -22,7 +22,7 @@ router.get("/:id", function (req, res) {
 		.exec(function (err, foundPlants) {
 			if (err) return res.send(err);
 
-			const context = { Plant: foundPlants }; //Plants
+			const context = { Plant: foundPlants}; //Plants
 			res.render("plants/show", context);
 		});
 });
