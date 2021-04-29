@@ -47,7 +47,8 @@ router.post("/:id", function (req, res) {
 		});
 	});
 });
-    // router.get('/', function (req, res){
+	
+	// router.get('/', function (req, res){
   //    
   // });
   
