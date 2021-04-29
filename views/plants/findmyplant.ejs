@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@800&display=swap" rel="stylesheet">
     <title>Find My Plant</title>
 </head>
 <body>
@@ -18,13 +20,13 @@
   
       <header class="navbar">
 
-        <a class="navbar home-button" href="/">Home</a>
-        <a class="navbar findmyplant-button" href="">Something Else</a>
+        <a href="/"> <button class="navbar home-button button">Home</button></a>
+        <a href=""><button class="navbar findmyplant-button button">Something</button></a>
 
         <form class="navbar searchbar">
 
           <input type="text" placeholder="Plant Name" label="label"/>
-          <input type="submit" value="Go">
+          <input type="submit" value="Search">
 
         </form>
 
@@ -45,7 +47,7 @@
 
     
         <form method="get" action="/">
-          <button type="submit">Clear Search</button>
+          <button class="button" type="submit">Clear Search</button>
         </form>
 
       </aside>
