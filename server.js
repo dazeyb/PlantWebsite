@@ -4,7 +4,7 @@ const express = require("express");
 
 /* ==== Internal Modules ==== */
 const controllers = require("./controllers");
-const { PlantsCollections } = require("./models");
+const { PlantsCollection } = require("./models");
 
 /* ==== Instanced Modules ==== */
 const app = express();

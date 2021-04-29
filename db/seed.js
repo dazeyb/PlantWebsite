@@ -36,7 +36,7 @@ const plants = [
     // {name: "bonsai"},
 ];
 
-db.PlantsCollections.insertMany(plants, function(err, createdPlant) {
+db.PlantsCollection.insertMany(plants, function(err, createdPlant) {
     if (err) return console.log(err);
     console.log({ createdPlant });
     process.exit(); //this will exit the file when this line is hit

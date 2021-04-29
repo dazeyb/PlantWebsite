@@ -28,6 +28,6 @@ mongoose.connection.on('error', (err) => {
 // Import models and then export them so all modules/files
 // can have access to all models through this file
 module.exports = {
-  PlantsCollections: require('./PlantsCollections.js'),
+  PlantsCollection: require('./PlantsCollection.js'),
   ReviewsCollection: require("./ReviewsCollection.js")
 };

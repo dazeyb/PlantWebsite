@@ -15,6 +15,6 @@ const plantsSchema = new mongoose.Schema(
 
 // creating our model based on the schema for the resource COLLECTION from the database
 // .model - "name of model", schema
-const PlantsCollections = mongoose.model("PlantsCollections", plantsSchema);
+const PlantsCollection = mongoose.model("PlantsCollection", plantsSchema);
 // NOTE each file can only have ONE export
-module.exports = PlantsCollections;
+module.exports = PlantsCollection;
