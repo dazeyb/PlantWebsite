@@ -7,8 +7,16 @@
     <title>ShowPageWorking</title>
 </head>
 <body>
+  
+  
+  <form>
+    <input type="text" name="name" placeholder="Name" />
+    <input type="submit" value="Search"/>
+  </form>
+
+
   <header>
-    <h1>Show Page for <%=Plants.name%></h1>
+    <h1>Show Page for <%=Plant.name%></h1>
     <nav>
       <ul>
         <li>
@@ -24,8 +32,28 @@
     <section>
       <h2>Author Attributes:</h2>
       <ul>
-        <li>Name: <%=Plants.name%></li>
+        <!-- image -->
+        <li>Name: <%=Plant.name%></li>
+        <li>Light: <%=Plant.light%></li>
+        <li>Price: <%=Plant.price%></li>
+        <li>Rating: <%=Plant.rating%></li>
+        <li>Description: <%=Plant.description%></li>
+        <li>Comments: </li>
+        <% Plant.reviews.forEach(review => { %>
+          <% console.log(review) %>
+          <li><%=review.comment%></li>
+          
+          
+          <%})%>
       </ul>
+
+      
+
+      <form action="/show/<%= Plant._id %>?_method=PUT" method="POST">
+        <input name="comment" type="string" placeholder="Comments"/>
+        <input type="submit" value="Submit"/>
+      </form>
+
     </section>
   </main>
 </body>
