@@ -22,8 +22,9 @@ app.use(express.static(__dirname + "/public"));
 
 // body data middleware
 app.use(express.urlencoded({ extended: true }));
+
 // method override middleware
-// app.use(methodOverride("_method"));
+app.use(methodOverride("_method"));
 
 // HOME ROUTE
 // app.get("/", function (req, res) {

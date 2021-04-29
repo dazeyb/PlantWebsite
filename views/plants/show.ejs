@@ -39,7 +39,8 @@
         <li>Comments: </li>
         <% Plant.reviews.forEach(review => { %>   <% console.log(review) %>
           
-          <form action="/show/<%= review._id %>?_method=DELETE" method="POST">
+          <!-- Forms can only do POST or GET, so we need to dictate a method before to ovverride (via method ovverride, in this case we don't need a method -->
+          <form action="/show/<%=review._id%>/<%=Plant._id%>?_method=DELETE" method="POST">
             <input type="submit" value="Delete Comment" />
           </form>
           
@@ -50,10 +51,8 @@
           <%})%>
       </ul>
 
-      <!-- We want to delete the specific html by deleting the specific comment in the database. -->
       
-
-      <form action="/show/<%= Plant._id %>?_method=PUT" method="POST">
+      <form action="/show/<%= Plant._id %>" method="POST">
         <input name="comment" type="string" placeholder="Comments"/>
         <input type="submit" value="Submit"/>
       </form>

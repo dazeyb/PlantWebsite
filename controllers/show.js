@@ -28,7 +28,7 @@ router.get("/:id", function (req, res) {
 });
 
 
-// This allows us to create comments and post them to the page/database
+// CREATE: This allows us to create comments and post them to the page/database
 router.post("/:id", function (req, res) {
 	db.ReviewsCollection.create(req.body, function (err, createdReview) {
 		if (err) return res.send(err);
@@ -46,8 +46,8 @@ router.post("/:id", function (req, res) {
 });
 
 
-// This sets up our page so comments can be deleted from the database
-router.delete('/:id', (req, res)=>{
+// DELETE: This sets up our page so comments can be deleted from the database
+router.delete('/:id/:plantid', (req, res)=>{
 	//This will remove from Reviews, and by association remove it from from PlantsCollection as well
 	db.ReviewsCollection.findByIdAndRemove(req.params.id, (err, deletedReview)=>{
 		if(err){
@@ -55,9 +55,8 @@ router.delete('/:id', (req, res)=>{
 			return res.send("Server Error :(")
 
 		} else {
-				res.redirect(`/show/${req.params.id}`);
-				console.log(`Deleted comment ${deletedReview}`);
-			  
+				res.redirect(`/show/${req.params.plantid}`);
+				console.log(`Deleted comment ${deletedReview}`);		  
 		}
 	})
 });
