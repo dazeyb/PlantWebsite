@@ -8,7 +8,7 @@ const plantsSchema = new mongoose.Schema(
         //temp: { type: int, required: true, default: 0},
         price:  {Number, default: 0},
         rating: {Number, default: 0}, //will be updated with every review in array
-        reviews: [Array]
+        reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: "ReviewsCollection" }]
 	},
 	{ timestamps: true }
 );
