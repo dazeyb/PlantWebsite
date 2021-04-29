@@ -55,9 +55,9 @@
 
 
       <article>
-        <ul>
+        <ul class="plant-item_container">
           <% plants.forEach(plant => { %>
-          <li>
+          <li class="plant-item">
               <a href="/show/<%= plant._id %>"> <%= plant.name %></a>
           </li>
           <% })%>

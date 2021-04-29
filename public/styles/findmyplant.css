@@ -64,7 +64,7 @@ header {
 
 .button {
     font-family: 'Spectral', serif;
-    padding
+    width: 80px;
 }
 
 
@@ -81,6 +81,20 @@ article {
     grid-column: 2 / 3;
     grid-area: article;
 }
+
+
+
+.plant-item_container {
+    display: flex;
+    gap: 40px;
+}
+
+.plant-item {
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+
 
 /** express blog for query params **/
 /** Example on fruits app for wrapping things **/
