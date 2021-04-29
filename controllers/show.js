@@ -44,27 +44,6 @@ router.post("/:id", function (req, res) {
 		});
 	});
 });
-<<<<<<< HEAD
-	
-	// router.get('/', function (req, res){
-  //    
-  // });
-
-  // Delete
-router.delete("/:id", function (req, res) {
-	db.ReviewsCollection.findByIdAndDelete(req.params.id, function (err, deletedReview) {
-		if (err) return res.send(err);
-
-		// we find the author, take the author, remove the article from the author so that we remove the ID that we put into the array from memory.
-
-		db.PlantsCollections.findById(deletedReview.author, function (err, foundPlant) {
-			foundPlant.articles.remove(deletedReview);
-			foundPlant.save();
-			return res.redirect(`/show/${req.params.id}`);
-		});
-	});
-});
-=======
 
 
 // DELETE: This sets up our page so comments can be deleted from the database
@@ -82,7 +61,6 @@ router.delete('/:id/:plantid', (req, res)=>{
 	})
 });
 
->>>>>>> submaster
   
 
 module.exports = router;
