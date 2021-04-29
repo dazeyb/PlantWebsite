@@ -16,18 +16,15 @@
 
 
   <header>
+  </header>
     <h1>Show Page for <%=Plant.name%></h1>
     <nav>
-      <ul>
-        <li>
+
           <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/authors">Author Index</a>
-        </li>
-      </ul>
+
+
     </nav>
-  </header>
+
   <main>
     <section>
       <h2>Author Attributes:</h2>
@@ -38,21 +35,28 @@
         <li>Price: <%=Plant.price%></li>
         <li>Rating: <%=Plant.rating%></li>
         <li>Description: <%=Plant.description%></li>
+        
         <li>Comments: </li>
-        <% Plant.reviews.forEach(review => { %>
-          <% console.log(review) %>
-          <li><%=review.comment%></li>
+        <% Plant.reviews.forEach(review => { %>   <% console.log(review) %>
           
+          <!-- Forms can only do POST or GET, so we need to dictate a method before to ovverride (via method ovverride, in this case we don't need a method -->
+          <form action="/show/<%=review._id%>/<%=Plant._id%>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete Comment" />
+          </form>
+          
+        <form action="">
+          <li><%=review.comment%></li>
+        </form>
           
           <%})%>
       </ul>
 
       
-
-      <form action="/show/<%= Plant._id %>?_method=PUT" method="POST">
+      <form action="/show/<%= Plant._id %>" method="POST">
         <input name="comment" type="string" placeholder="Comments"/>
         <input type="submit" value="Submit"/>
       </form>
+
 
     </section>
   </main>

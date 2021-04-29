@@ -8,7 +8,7 @@ const router = express.Router();
 const db = require("../models");
 
 // router.get("/show", function (req, res) {
-//     db.PlantsCollections.find({}, function (err, allPlants) {
+//     db.PlantsCollection.find({}, function (err, allPlants) {
 //        if (err) return res.send(err);
 //        const context = { plants: allPlants};
 //        res.render("plants/show", context);
@@ -17,38 +17,50 @@ const db = require("../models");
 //     });
 
 router.get("/:id", function (req, res) {
-	db.PlantsCollections.findById(req.params.id)
+	db.PlantsCollection.findById(req.params.id)
 		.populate("reviews") // db.Author.findById() //translating review ids to variables stored in db
 		.exec(function (err, foundPlants) {
 			if (err) return res.send(err);
 
-			const context = { Plant: foundPlants }; //Plants
+			const context = { Plant: foundPlants}; //Plants
 			res.render("plants/show", context);
 		});
 });
 
 
-
+// CREATE: This allows us to create comments and post them to the page/database
 router.post("/:id", function (req, res) {
 	db.ReviewsCollection.create(req.body, function (err, createdReview) {
 		if (err) return res.send(err);
 		console.log(createdReview);
 
-		// allows us to add an article to the author
-		//.exec short for execute. used to help stack functions. similar to .then. after this query, exectute this one!
-		db.PlantsCollections.findById(req.params.id,function (err, foundPlant) {
+		db.PlantsCollection.findById(req.params.id,function (err, foundPlant) {
 			if (err) return res.send(err);
 
-			// update the author articles array
-			foundPlant.reviews.push(createdReview); // adds article to the author
+			foundPlant.reviews.push(createdReview); 
 			foundPlant.save(); // save relationship to database, commits to memory
 
 			return res.redirect(`/show/${req.params.id}`);
 		});
 	});
 });
-    // router.get('/', function (req, res){
-  //    
-  // });
+
+
+// DELETE: This sets up our page so comments can be deleted from the database
+router.delete('/:id/:plantid', (req, res)=>{
+	//This will remove from Reviews, and by association remove it from from PlantsCollection as well
+	db.ReviewsCollection.findByIdAndRemove(req.params.id, (err, deletedReview)=>{
+		if(err){
+			console.log(err);
+			return res.send("Server Error :(")
+
+		} else {
+				res.redirect(`/show/${req.params.plantid}`);
+				console.log(`Deleted comment ${deletedReview}`);		  
+		}
+	})
+});
+
   
-    module.exports = router;
+
+module.exports = router;

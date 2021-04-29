@@ -16,7 +16,7 @@ const db = require("../models");
 
 //HOME 
 router.get("/", function (req, res) {
-  db.PlantsCollections.find({}, function (err, allPlants) {
+  db.PlantsCollection.find({}, function (err, allPlants) {
      if (err) return res.send(err);
      const context = { plants: allPlants};
      res.render("plants/findmyplant", context);
