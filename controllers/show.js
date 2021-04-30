@@ -27,18 +27,17 @@ router.get("/filter", async function(req, res){
 	
 	try{
 		console.log("testing filter");
-		let foundPlant=[await db.PlantsCollection.find({light:req.query.light})]
+		let foundPlant=[await db.PlantsCollection.findOne({light:req.query.light})]
 		console.log(foundPlant);
-		res.render("plants/searchresults")
-
+		const context = { plants: foundPlant};
+		res.render("plants/searchresults", context)
 	}
 	catch(err){
-
-
 	};
 
 });
-	
+
+
 
 
 router.get("/:id", function (req, res) {
