@@ -7,21 +7,13 @@ const router = express.Router();
 
 const db = require("../models");
 
-// router.get("/show", function (req, res) {
-//     db.PlantsCollection.find({}, function (err, allPlants) {
-//        if (err) return res.send(err);
-//        const context = { plants: allPlants};
-//        res.render("plants/show", context);
-//        });  
-//     // res.render("findmyplant");
-//     });
-
 //SEARCH
 router.get("/search", async function(req, res){
-	console.log("error");
+	
 		try{
+			// console.log("testing search");
 			const foundPlant=await db.PlantsCollection.findOne({name:req.query.name})
-			console.log(req.query);
+			//console.log(req.query);
 			res.redirect(`/show/${foundPlant._id}`)
 		}
 		catch(err){
@@ -29,6 +21,23 @@ router.get("/search", async function(req, res){
 			return res.send(err)
 		};
 	});
+
+//FILTER
+router.get("/filter", async function(req, res){
+	
+	try{
+		console.log("testing filter");
+		let foundPlant=[await db.PlantsCollection.find({light:req.query.light})]
+		console.log(foundPlant);
+		res.render("plants/searchresults")
+
+	}
+	catch(err){
+
+
+	};
+
+});
 	
 
 

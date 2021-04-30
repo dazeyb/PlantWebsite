@@ -27,26 +27,39 @@
         <a href="/"> <button class="navbar home-button navbutton button">Home</button></a>
         <a href=""><button class="navbar findmyplant-button navbutton button">Something</button></a>
 
-        <form class="navbar searchbar navbutton button">
+        <form class="navbar searchbar navbutton button" action="/show/search" method="GET">
 
-          <input type="text" placeholder="Plant Name" label="label"/>
-          <input type="submit" value="Search">
+          <input type="text" name="name" placeholder="Plant Name" />
+          <input type="submit" value="Search"/>
 
         </form>
 
       </header>
 
 
-
+      <!-- PLANT FILTER -->
       <aside class="sidebar-left">
         Left Sidebar
         
         
-        <form action="">
-
-
-
-
+        
+        <form id="filter" action="/show/filter">
+            <select class="example" name="light">
+                  <option name="" value="0" selected>Light Level</option>
+                  <option name="table1" value="1"> 1</option>
+                  <option name="table2" value="2"> 2</option>
+                  <option name="table3" value="3"> 3</option>
+            </select>
+            
+            <select class="example" name="price">
+              <option name="" value="0" selected>Price</option>
+              <option name="table1" value="1"> 1</option>
+              <option name="table2" value="2"> 2</option>
+              <option name="table3" value="3"> 3</option>
+            </select>
+            
+            <input type="submit" value="go">
+            
         </form>
 
     
