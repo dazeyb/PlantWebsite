@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
 body {
     background-color: #C9E4CA;
-    font-family: 'Spectral', serif;
+    /* font-family: 'Spectral', serif; */
+    font-family: 'Work Sans', sans-serif;
 }
 
 .grid {
@@ -49,17 +52,14 @@ header {
 .navbar {
 }
 
-.fa-leaf {
-    font-size: 200px;
-    color: black;
-}
-.fa-spa {
-    font-size: 200px;
+.fa-seedling {
+    font-size: 30px;
     color: black;
 }
 
 .navbutton {
     background-color:  #C9E4CA;
+    /* background-color:  #b5e0b6; */
     border: none;
 }
 
@@ -76,7 +76,8 @@ header {
 }
 
 .button {
-    font-family: 'Spectral', serif;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 750;
     width: 80px;
     text-transform: uppercase;
 }
@@ -84,6 +85,7 @@ header {
 .button:hover {
     cursor: pointer;
     font-weight:400;
+    background-color:  #b5e0b6;
 }
 
 .sidebar-left {
