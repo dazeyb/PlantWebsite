@@ -91,6 +91,8 @@ header {
         /* background-color:  #b5e0b6; */
         padding: 1em;
         text-align: center;
+        background:#F0EAD2;
+        border: none;
     }
 
      .navbutton:hover, .navbutton:active {
@@ -111,6 +113,7 @@ header {
 
         .searchbar {
             justify-content: right;
+            
         }
 
 
