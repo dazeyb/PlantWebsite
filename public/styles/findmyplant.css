@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 
 body {
-    background-color: #C9E4CA;
+    background-color:#F0EAD2;
     /* font-family: 'Spectral', serif; */
     font-family: 'Work Sans', sans-serif;
 }
@@ -40,6 +40,7 @@ body {
 
     min-width: 100%;
     max-height:100%;
+    border-radius: 20px 20px 0 0;
 }
 
 
@@ -53,15 +54,16 @@ header {
     /* border-width: 2px; 
     border-color: rgb(51, 51, 51);
     padding: 5px; */
-    background-color: gray;
-    border: 3px solid brown;
+    border: 3px solid rgb(0, 0, 0);
     /* row-gap: 20px; */
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-evenly; */
     align-items: center;
     height: 60px;
+    box-sizing: border-box;
 }
+
 
 .navbar {
     display: flex;
@@ -70,8 +72,15 @@ header {
     justify-content: space-between;
     text-decoration: none;
     width: 100%;
-    letter-spacing: 1px;
+    letter-spacing: 0;
 }
+
+    .plantlogo {
+        margin: 0 0 0 40px;
+        font-size: 35px;
+        font-family: 'Spectral', serif;
+
+    }
 
     .fa-seedling {
         font-size: 30px;
@@ -79,7 +88,6 @@ header {
     }
 
     .navbutton {
-        background-color: rgb(255, 255, 255);
         /* background-color:  #b5e0b6; */
         padding: 1em;
         text-align: center;
@@ -92,33 +100,6 @@ header {
     a {
         text-align: center;
     }
-
-    /*
-    .navbutton:after,
-    .navbutton:before {
-      backface-visibility: hidden;
-      border: 1px solid rgba(#fff, 0);
-      bottom: 0px;
-      content: " ";
-      display: block;
-      margin: 0 auto;
-      position: relative;
-      transition: all 280ms ease-in-out;
-      width: 0;
-    }
-    
-    .navbutton:hover:after,
-    .navbutton:hover:before {
-      backface-visibility: hidden;
-      border-color: #fff;
-      transition: width 350ms ease-in-out;
-    }
-    
-    .navbutton:hover:before {
-      bottom: auto;
-      top: 0;
-      width: 100%;
-    } */
 
         .home-button {
             /* justify-content:  */
