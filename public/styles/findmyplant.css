@@ -47,7 +47,20 @@ header {
 }
 
 .navbar {
+}
 
+.fa-leaf {
+    font-size: 200px;
+    color: black;
+}
+.fa-spa {
+    font-size: 200px;
+    color: black;
+}
+
+.navbutton {
+    background-color:  #C9E4CA;
+    border: none;
 }
 
 .home-button {
@@ -65,8 +78,13 @@ header {
 .button {
     font-family: 'Spectral', serif;
     width: 80px;
+    text-transform: uppercase;
 }
 
+.button:hover {
+    cursor: pointer;
+    font-weight:400;
+}
 
 .sidebar-left {
     grid-row: 3;
