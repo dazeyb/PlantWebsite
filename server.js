@@ -38,7 +38,7 @@ app.use(methodOverride("_method"));
 
 // Other Routes
 app.use("/", controllers.findmyplant)
-app.use("/:id", controllers.show)
+app.use("/show", controllers.show)
 
 
 

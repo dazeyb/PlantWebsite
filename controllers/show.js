@@ -16,6 +16,22 @@ const db = require("../models");
 //     // res.render("findmyplant");
 //     });
 
+//SEARCH
+router.get("/search", async function(req, res){
+	console.log("error");
+		try{
+			const foundPlant=await db.PlantsCollection.findOne({name:req.query.name})
+			console.log(req.query);
+			res.redirect(`/show/${foundPlant._id}`)
+		}
+		catch(err){
+			console.log(err);
+			return res.send(err)
+		};
+	});
+	
+
+
 router.get("/:id", function (req, res) {
 	db.PlantsCollection.findById(req.params.id)
 		.populate("reviews") // db.Author.findById() //translating review ids to variables stored in db
@@ -61,6 +77,33 @@ router.delete('/:id/:plantid', (req, res)=>{
 	})
 });
 
-  
+
+//loads EDIT COMMENT page
+router.get("/:id/:plantid/edit", function (req, res) {
+	db.ReviewsCollection.findById(req.params.id, function (err, foundReview) {
+		if (err) return res.send(err);
+
+		const context = { review: foundReview, plantid:req.params.plantid };
+		
+		res.render("plants/edit", context);
+	});
+});
+
+
+//UPDATE VALUES IN REVIEWS COLLECTION COMMENT
+
+router.put('/:id/:plantid', (req, res)=>{
+	db.ReviewsCollection.findByIdAndUpdate(req.params.id, 
+	req.body,
+	// return the new object
+	{ new: true },
+	// callback function after the update has completed
+	function (err) {
+		if (err) return res.send(err);
+		return res.redirect(`/show/${req.params.plantid}`);
+	});
+});
+
+
 
 module.exports = router;
