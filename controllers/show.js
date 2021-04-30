@@ -16,6 +16,22 @@ const db = require("../models");
 //     // res.render("findmyplant");
 //     });
 
+//SEARCH
+router.get("/search", async function(req, res){
+	console.log("error");
+		try{
+			const foundPlant=await db.PlantsCollection.findOne({name:req.query.name})
+			console.log(req.query);
+			res.redirect(`/show/${foundPlant._id}`)
+		}
+		catch(err){
+			console.log(err);
+			return res.send(err)
+		};
+	});
+	
+
+
 router.get("/:id", function (req, res) {
 	db.PlantsCollection.findById(req.params.id)
 		.populate("reviews") // db.Author.findById() //translating review ids to variables stored in db
