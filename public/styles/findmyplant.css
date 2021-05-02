@@ -19,15 +19,20 @@ body {
     transition-duration: .6s;
     transition-timing-function: ease;
     text-decoration: none;
-    
-    /* this moved everything */
+
+
+    /* Moves almost everything to edges, might cause issues later. Placing these properties in other elements didn't work */
     margin-inline-start: 0;
+    margin-inline-end: 0;
+    margin-top: 0;
+
+
   }
 
 .grid {
     color: brown;
     display: grid;
-    grid-template-columns: 400px auto;
+    grid-template-columns: 29% auto;
     grid-template-rows: repeat(5, 100px);
     grid-gap: 0em;
     grid-template-areas: "banner banner"
@@ -39,7 +44,7 @@ body {
 
 .banner {
     grid-row: 1;
-    grid-column: 1 / 3;
+    grid-column: 1 / -1;
     grid-area: banner;
 
     background-color: #ADC178;
@@ -51,19 +56,17 @@ body {
     box-sizing: border-box;
     display: box;
     margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    transform: translateZ(0);
-    margin: 0;
 }
 
     .banner-body {
+        margin-inline-start: 0px;
     }
 
 
 header {
     /* Orientation */
     grid-row: 2;
-    grid-column: 1 / 3;
+    grid-column: 1 / -1;
     grid-area: header;
 
     border: 3px solid rgb(0, 0, 0);
@@ -99,7 +102,8 @@ header {
         font-size: 30px;
         color: #aac560;
     }
-
+    
+    
     .navbutton {
         /* background-color:  #b5e0b6; */
         padding: 1em;
@@ -107,71 +111,72 @@ header {
         background:#f0ede3;
         border: none;
     }
-
+    
      .navbutton:hover, .navbutton:active {
-        letter-spacing: 6px;
+         letter-spacing: 6px;
     }
-
-    a {
-        text-align: center;
-    }
-
+    
+    
         .home-button {
             color: #6C584C;
         }
-
+        
         .findmyplant-button {
             justify-content: center;
             color: #6C584C;
         }
-
+        
         .searchbar {
             justify-content: right;
             color: #6C584C;
             border: none;
             background-color: #f0ede3;   
         }
-
-            .searchbutton {
-                color: #6C584C;
-                border: none;
+        
+        .searchbutton {
+            color: #6C584C;
+            border: none;
+        }
+        
+        .searchbutton:hover {
+            color: #504239;
             }
-
-            .searchbutton:hover {
-                color: #504239;
-            }
-
+            
             .searchfield {
                 background-color: #f5f4f0;
                 border: outset;
                 border-color: #A98467;
             }
-
-.fillerphoto-box {
-    grid-row: 3;
-    grid-column: 1 / 3;
+            
+            .fillerphoto-box {
+                grid-row: 3;
+                grid-column: 1 / -1;
     grid-area: fillerphoto-box;
-
+    
     box-sizing:border-box;
     min-width: 100%;
     max-height: 30%;
 
     border: solid black;
+    
+    justify-items: center;
+    align-content: stretch;
 }
 
-    .photo-wrapper {
-        display: flex;
-    }
+.photo-wrapper {
+    /* justify-content: center;
+    align-content: inherit; */
+}
 
-        .123 {
-            align-items: center;
-        }
+.123 {
+    align-items: center;
+}
 
 
-        .fillerphoto {
-            min-width: 100%;
-            max-height: 30%;
-        }
+.fillerphoto {
+    min-width: 100%;
+    max-height: 30%;
+}
 
 
 .button {
@@ -180,15 +185,22 @@ header {
     text-align: center;
 }
 
-.button:hover {
+.button:hover, a:hover  {
     cursor: pointer;
+}
+
+a,  {
+    text-align: center;
+}
+
+img {
 }
 
 .sidebar-left {
     grid-row: 4;
     grid-column: 1 / 2;
     grid-area: sidebar-1;
-
+    
     border: 3px solid rgb(6, 61, 145);
 }
 
@@ -197,6 +209,8 @@ article {
     grid-row: 4;
     grid-column: 2 / 3;
     grid-area: article;
+
+
 }
 
     .plant-item_container {
