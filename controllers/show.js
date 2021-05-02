@@ -26,7 +26,7 @@ router.get("/search", async function(req, res){
 router.get("/filter", async function(req, res){
 	try{
 		console.log("testing filter");
-		let foundPlant=await db.PlantsCollection.find({light:req.query.light},{price:req.query.price})
+		let foundPlant=await db.PlantsCollection.find({light:req.query.light, price:req.query.price})
 		console.log(foundPlant);
 		const context = { plants: foundPlant};
 		res.render("plants/searchresults", context)
