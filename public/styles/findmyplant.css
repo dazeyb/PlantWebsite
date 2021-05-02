@@ -25,6 +25,8 @@ body {
     margin-inline-start: 0;
     margin-inline-end: 0;
     margin-top: 0;
+
+
   }
 
 .grid {
@@ -189,6 +191,9 @@ header {
 
 a,  {
     text-align: center;
+}
+
+img {
 }
 
 .sidebar-left {
