@@ -3,7 +3,7 @@ const db = require("../models"); //require models which has db
 const plants = [
     {name: "Snake Plant", 
     description: "Dracaena trifasciata is a species of flowering plant in the family Asparagaceae, native to tropical West Africa from Nigeria east to the Congo. It is most commonly known as the snake plant, Saint George's sword, mother-in-law's tongue, and viper's bowstring hemp, among other names.",
-    light: 1,
+    light: 1, 
     price: 2,
     image: "https://cdn.shopify.com/s/files/1/0315/1514/8419/products/Snake-Plant-Laurentii_D-155894.jpg?v=1614703120",
     },
@@ -15,11 +15,11 @@ const plants = [
     image: "https://cdn.shopify.com/s/files/1/0315/1514/8419/products/Braided-Money-Tree_D-287390_1024x1024.jpg?v=1605985677",
     },
 
-    {name: "Orchid", 
-    description: "The Orchidaceae are a diverse and widespread family of flowering plants, with blooms that are often colourful and fragrant, commonly known as the orchid family. Along with the Asteraceae, they are one of the two largest families of flowering plants.",
-    light: 3,
-    price: 3,
-    image: "https://ak1.ostkcdn.com/images/products/27622750/L32775821.jpg?imwidth=400&impolicy=medium",
+    {name: "Chinese evergreen", 
+    description: "The Aglaonema “Silver Bay” (Chinese evergreen) is a large, lush plant that's a perfect addition to any office or room. ... The oval leaves unfurl from the center and grow outward to be around 9 to 12 inches long, while the whole plant can grow to about four feet tall.",
+    light: 2,
+    price: 4,
+    image: "https://cdn.shopify.com/s/files/1/0315/1514/8419/products/Aglaonema-Silver-Bay_E-939384.jpg?v=1614719511",
     },
 
     {name: "Lucky Bamboo", 
