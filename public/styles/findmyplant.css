@@ -11,14 +11,17 @@ body {
     background-color:#f0ede3;
     /* font-family: 'Spectral', serif; */
     font-family: 'Work Sans', sans-serif;
+
 }
 
 * {
-    box-sizing: inherit; 
     transition-property: all;
     transition-duration: .6s;
     transition-timing-function: ease;
     text-decoration: none;
+    
+    /* this moved everything */
+    margin-inline-start: 0;
   }
 
 .grid {
