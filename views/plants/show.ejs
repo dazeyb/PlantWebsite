@@ -26,6 +26,9 @@
     </nav>
 
   <main>
+    <div>
+        <img src="<%=Plant.image%>"/>
+    </div>
     <section>
       <h2>Plant Attributes:</h2>
       <ul>
@@ -39,7 +42,7 @@
         <li>Comments: </li>
         <% Plant.reviews.forEach(review => { %>   <% console.log(review) %>
         <li><%=review.comment%></li>
-        <img src="/image.jpg">.
+        
           
           <!-- Forms can only do POST or GET, so we need to dictate a method before to ovverride (via method ovverride, in this case we don't need a method -->
           <form action="/show/<%=review._id%>/<%=Plant._id%>?_method=DELETE" method="POST">
