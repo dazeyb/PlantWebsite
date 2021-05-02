@@ -2,11 +2,13 @@
 
 /* Make buttons not turn purple on click */
 
+/* Make buttons linking to amazon on donation */
+
 
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 
 body {
-    background-color:#F0EAD2;
+    background-color:#f0ede3;
     /* font-family: 'Spectral', serif; */
     font-family: 'Work Sans', sans-serif;
 }
@@ -23,10 +25,11 @@ body {
     color: brown;
     display: grid;
     grid-template-columns: 400px auto;
-    grid-template-rows: repeat(4, 100px);
-    grid-gap: 1.1em;
+    grid-template-rows: repeat(5, 100px);
+    grid-gap: 0em;
     grid-template-areas: "banner banner"
                          "header header"
+                         "fillerphoto-box fillerphoto-box"
                          "sidebar-1 article"
                          "footer footer";
 }
@@ -36,12 +39,22 @@ body {
     grid-column: 1 / 3;
     grid-area: banner;
 
+    background-color: #ADC178;
     color: rgb(18, 214, 0);
 
     min-width: 100%;
     max-height:100%;
-    border-radius: 20px 20px 0 0;
+
+    box-sizing: border-box;
+    display: box;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    transform: translateZ(0);
+    margin: 0;
 }
+
+    .banner-body {
+    }
 
 
 header {
@@ -50,14 +63,8 @@ header {
     grid-column: 1 / 3;
     grid-area: header;
 
-    /* list-style-type: none; */
-    /* border-width: 2px; 
-    border-color: rgb(51, 51, 51);
-    padding: 5px; */
     border: 3px solid rgb(0, 0, 0);
-    /* row-gap: 20px; */
-    display: flex;
-    flex-wrap: wrap;
+
     /* justify-content: space-evenly; */
     align-items: center;
     height: 60px;
@@ -66,9 +73,11 @@ header {
 
 
 .navbar {
+
+    /* These actually keep the elements in a line, not sure how with grid as well */
     display: flex;
     flex-direction: row;
-    /* This pushed the searchbar out of the container */
+
     justify-content: space-between;
     text-decoration: none;
     width: 100%;
@@ -79,19 +88,20 @@ header {
         margin: 0 0 0 40px;
         font-size: 35px;
         font-family: 'Spectral', serif;
+        color: #6C584C;
 
     }
 
     .fa-seedling {
         font-size: 30px;
-        color: black;
+        color: #aac560;
     }
 
     .navbutton {
         /* background-color:  #b5e0b6; */
         padding: 1em;
         text-align: center;
-        background:#F0EAD2;
+        background:#f0ede3;
         border: none;
     }
 
@@ -104,16 +114,60 @@ header {
     }
 
         .home-button {
-            /* justify-content:  */
+            color: #6C584C;
         }
 
         .findmyplant-button {
             justify-content: center;
+            color: #6C584C;
         }
 
         .searchbar {
             justify-content: right;
-            
+            color: #6C584C;
+            border: none;
+            background-color: #f0ede3;   
+        }
+
+            .searchbutton {
+                color: #6C584C;
+                border: none;
+            }
+
+            .searchbutton:hover {
+                color: #504239;
+            }
+
+            .searchfield {
+                background-color: #f5f4f0;
+                border: outset;
+                border-color: #A98467;
+            }
+
+.fillerphoto-box {
+    grid-row: 3;
+    grid-column: 1 / 3;
+    grid-area: fillerphoto-box;
+
+    box-sizing:border-box;
+    min-width: 100%;
+    max-height: 30%;
+
+    border: solid black;
+}
+
+    .photo-wrapper {
+        display: flex;
+    }
+
+        .123 {
+            align-items: center;
+        }
+
+
+        .fillerphoto {
+            min-width: 100%;
+            max-height: 30%;
         }
 
 
@@ -128,30 +182,28 @@ header {
 }
 
 .sidebar-left {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 1 / 2;
     grid-area: sidebar-1;
 
     border: 3px solid rgb(6, 61, 145);
 }
 
+
 article {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 2 / 3;
     grid-area: article;
 }
 
+    .plant-item_container {
+        display: flex;
+    }
 
-
-.plant-item_container {
-    display: flex;
-    gap: 40px;
-}
-
-.plant-item {
-    flex-wrap: wrap;
-    list-style: none;
-}
+        .plant-item {
+            flex-wrap: wrap;
+            list-style: none;
+        }
 
 
 
@@ -159,11 +211,10 @@ article {
 /** Example on fruits app for wrapping things **/
   
 footer {
-    grid-row: 4;
+    grid-row: 5;
     grid-column: 1 / 3;
     grid-area: footer;
 
     border: 3px solid brown;
-    padding-top: 10px;
 }
 
