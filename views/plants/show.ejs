@@ -51,7 +51,7 @@
           <div class="photo">
           
             <div>
-              <img src="<%=Plant.image%>"/>
+              <img class="plant-img" src="<%=Plant.image%>"/>
             </div>
 
           </div>
@@ -63,42 +63,43 @@
 
             <h1><%=Plant.name%></h1>
 
-              <h2>Plant Attributes:</h2>
+              <div class="description-box">
+            
+                <ul class="plant-stats">
 
-              <ul>
-                <li>Name: <%=Plant.name%></li>
-                <li>Light: <%=Plant.light%></li>
-                <li>Water: <%=Plant.water%></li>
-                <li>Humidity: <%=Plant.humidity%></li>
-                <li>Price: <%=Plant.price%></li>
-                <li>Description: <%=Plant.description%></li>
-                
-                <br>
+                  <li>Price: <%=Plant.price%></li>
+                  <li>Light: <%=Plant.light%></li>
+                  <li>Water: <%=Plant.water%></li>
+                  <li>Humidity: <%=Plant.humidity%></li>
+                  <li>Description: <%=Plant.description%></li>
+                  
+                  <br>
 
-                <li>Comments: </li>
-                  <% Plant.reviews.forEach(review => { %>   <% console.log(review) %>
-                <li><%=review.comment%></li>
-                  
-                  
-                  <!-- Forms can only do POST or GET, so we need to dictate a method before to ovverride (via method ovverride, in this case we don't need a method -->
-                <form action="/show/<%=review._id%>/<%=Plant._id%>?_method=DELETE" method="POST">
-                  <input type="submit" value="Delete Comment" />
-                </form>
-                 
-                <!-- Edit button currently causing delete as well-->
-                <a href="/show/<%= review._id%>/<%=Plant.id%>/edit">Edit</a>
-                <ul>
-                    <!-- <li>Comment: <%= review.comment %></li> -->
-                </ul>
-                  
-                  <!-- <form action="/show/<%=review._id%>/<%=Plant._id%>?_method=PUT" method="POST">
-                    <input type="submit" value="Update">
+                  <li>Comments: </li>
+                    <% Plant.reviews.forEach(review => { %>   <% console.log(review) %>
+                  <li><%=review.comment%></li>
                     
-                  </form> -->
-                  <%})%>
+                    
+                    <!-- Forms can only do POST or GET, so we need to dictate a method before to ovverride (via method ovverride, in this case we don't need a method -->
+                  <form action="/show/<%=review._id%>/<%=Plant._id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete Comment" />
+                  </form>
+                  
+                  <!-- Edit button currently causing delete as well-->
+                  <a href="/show/<%= review._id%>/<%=Plant.id%>/edit">Edit</a>
+                  <ul>
+                      <!-- <li>Comment: <%= review.comment %></li> -->
+                  </ul>
+                    
+                    <!-- <form action="/show/<%=review._id%>/<%=Plant._id%>?_method=PUT" method="POST">
+                      <input type="submit" value="Update">
+                      
+                    </form> -->
+                    <%})%>
 
-                </ul>
-                
+                  </ul>
+
+                </div>
                 
                 <form action="/show/<%= Plant._id %>" method="POST">
                   <input name="comment" type="string" placeholder="Comments"/>
