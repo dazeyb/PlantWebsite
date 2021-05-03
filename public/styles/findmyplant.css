@@ -26,14 +26,14 @@ body {
     margin-inline-end: 0;
     margin-top: 0;
 
-    max-width: 100%;
+    /* max-width: 100%; */
   }
 
 .grid {
     display: grid;
-    grid-template-columns: 29% auto;
+    grid-template-columns: 19% auto;
     /* grid-template-rows: repeat(5, auto); */
-    grid-template-rows: 8% 13%;
+    grid-template-rows: 68px 97px;
     grid-gap: 0em;
     grid-template-areas: "banner banner"
                          "header header"
@@ -91,7 +91,7 @@ header {
 }
 
     .plantlogo {
-        margin: 15px 0 0 60px;
+        margin: 32px 0 0 60px;
         font-size: 45px;
         font-family: 'Spectral', serif;
         color: #6C584C;
@@ -107,7 +107,7 @@ header {
     
     .navbutton {
         /* background-color:  #b5e0b6; */
-        margin: 15px 0 0 0;
+        margin: 32px 0 0 0;
         padding: 1em; 
         text-align: center;
         background:#f0ede3;
@@ -152,6 +152,17 @@ header {
                 border: outset;
                 border-color: #A98467;
             }
+
+        .search-box_button {
+            color: #504239;
+            background-color: cornsilk;
+        }
+
+        search-box_field {
+            background-color: #f5f4f0;
+            border: groove;
+            border-color: #A98467;
+        }
             
 
     .fillerphoto-box {
@@ -246,16 +257,20 @@ article {
 
 }
 
-    .search-results_box {
+    .search-filter_box {
         border: 20px solid lightcoral;
 }
 
         .plant-item_container {
             display: flex;
+            flex-wrap: wrap;
         }
 
+            .plant-img_div{
+
+            }
+
             .plant-item {
-                flex-wrap: wrap;
                 list-style: none;
             }
 

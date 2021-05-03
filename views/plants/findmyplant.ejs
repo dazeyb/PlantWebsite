@@ -32,8 +32,8 @@
           <form class="searchbar navbutton button" action="/show/search" method="GET">
 
 
-            <input type="text" name="name" placeholder="Plant Name" />
-            <input type="submit" value="Search"/>
+            <input class="search-box_field" type="text" name="name" placeholder="Plant Name" />
+            <input class="search-box_button button" type="submit" value="Search"/>
 
           </form>
 
@@ -86,18 +86,23 @@
       
 
 
-        <article class="search-results_box">
+        <article class="search-filter_box">
           <section>
+
             <ul class="plant-item_container">
+
               <% plants.forEach(plant => { %>
               <li class="plant-item">
                   <a href="/show/<%= plant._id %>"> <%= plant.name %></a>
               </li>
-              <div>
-                <img src="<%=plant.image%>"/>
+
+              <div class="plant-img_div">
+                <img class="plant-img" src="<%=plant.image%>"/>
               </div>
+
               <% })%>
             </ul> 
+
           </section>
         </article>
 
