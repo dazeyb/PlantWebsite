@@ -120,26 +120,24 @@
       </aside>
     
         <article class="search-filter_box">
-          <section>
-
             <div class="plant-flex_box">
 
               <% plants.forEach(plant => { %>
                 
                 <div class="plant-item_container">
+                  
                   <div class="plant-img_div">
                     <img class="plant-img" src="<%=plant.image%>"/>
                   </div>
                   
                   <div class="plant-text">
-                      <a href="/show/<%= plant._id %>"> <%= plant.name %></a>
+                      <a class="plant-text_anchor" href="/show/<%= plant._id %>"><%= plant.name %></a>
                   </div>
+
                 </div>
               <% })%>
 
             </div> 
-
-          </section>
         </article>
 
         
