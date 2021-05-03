@@ -235,7 +235,7 @@ header {
         .edit-form {
             padding: 20px;
             font-weight: 100;
-            color: #5e502b;
+            color: #44391b;
             background-color: #ceccb8;
             border-radius: 28px 0 0 28px;
             font-size: 25px;
@@ -243,12 +243,13 @@ header {
 
         .edit-submit_button {
             padding: 20px ;
-            font-weight: 100;
-            color: #5e502b;
+            font-weight: 300;
+            color: #44391b;
             background-color: #ceccb8;
             border-radius: 0 28px 28px 0;
             font-size: 25px;
             text-transform: capitalize;
+            font-family: 'Work Sans', sans-serif;
         }
 
         .edit-submit_button:hover {
