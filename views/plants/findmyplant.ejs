@@ -13,135 +13,112 @@
     <title>Find My Plant</title>
 </head>
 <body>
-<section class="grid">
-    
-    <div class="banner">
-    </div>
-  
-    <header class="navbar">
-        
-        <div class="plantlogo">Leafly
-          <i class="fas fa-seedling"></i>
-        </div>
-        
-        <a href="/"><button class="navbar home-button navbutton button">Home</button></a>
-        
-        <a href="https://saveplants.org/"><button class="navbar findmyplant-button navbutton button">Conservation</button></a>
-
-
-        <form class="searchbar navbutton button" action="/show/search" method="GET">
-
-
-          <input type="text" name="name" placeholder="Plant Name" />
-          <input type="submit" value="Search"/>
-
-        </form>
-
-      </header>
-
-
-      <div class="fillerphoto-box">
-          <!-- <div class="photo-wrapper"> -->
-
-              <img class="fillerphoto" src="https://images.unsplash.com/photo-1592150621744-aca64f48394a?ixid=MnwxMjA3fDB8MHxwaG90[…]GVufDB8fHx8& ixlib=rb-1.2.1&auto=format&fit=crop&w=1368&q=80"/>
-          
-          <!-- </div> -->
+  <section class="grid">
+      
+      <div class="banner">
       </div>
-
-      <!-- PLANT FILTER -->
-      <aside class="sidebar-left">
-        
-        <form id="filter" action="/show/filter">
-
-            <select class="example" name="light" required>
-                  <option name="" value="" selected>Light Level</option>
-                  <option name="table1" value="1"> 1</option>
-                  <option name="table2" value="2"> 2</option>
-                  <option name="table3" value="3"> 3</option>
-            </select>
-            
-            <select class="example" name="price" required>
-              <option name="" value="" selected>Price</option>
-              <option name="table1" value="1"> 1</option>
-              <option name="table2" value="2"> 2</option>
-              <option name="table3" value="3"> 3</option>
-              <option name="table3" value="4"> 4</option>
-            </select>
-            
-            <input type="submit" value="go">
-            
-        </form>
-
     
-        <form method="get" action="/">
-          <button class="button" type="submit">Clear Search</button>
-        </form>
+      <header class="navbar">
+          
+          <div class="plantlogo">Leafly
+            <i class="fas fa-seedling"></i>
+          </div>
+          
+          <a href="/"><button class="navbar home-button navbutton button">Home</button></a>
+          
+          <a href="https://saveplants.org/"><button class="navbar findmyplant-button navbutton button">Conservation</button></a>
 
-      </aside>
-    
+
+          <form class="searchbar navbutton button" action="/show/search" method="GET">
 
 
-      <article class="search-results_box">
-        <!-- <section>
-          <ul class="plant-item_container">
-            <% plants.forEach(plant => { %>
-            <li class="plant-item">
-                <a href="/show/<%= plant._id %>"> <%= plant.name %></a>
-            </li>
-            <div>
-              <img src="<%=plant.image%>"/>
+            <input type="text" name="name" placeholder="Plant Name" />
+            <input type="submit" value="Search"/>
+
+          </form>
+
+        </header>
+
+
+        <div class="fillerphoto-box">
+            <div class="photo-wrapper">
+                <img class="fillerphoto" src="https://images.unsplash.com/photo-1592150621744-aca64f48394a?ixid=MnwxMjA3fDB8MHxwaG90[…]GVufDB8fHx8& ixlib=rb-1.2.1&auto=format&fit=crop&w=1368&q=80"/>
+                
+                <!-- <div class="text-background"> -->
+                  <div class="img-text">
+                    Find Your Plant Today
+                  </div>
+                <!-- </div> -->
+
             </div>
-            <% })%>
-          </ul> 
-        </section> -->
-      </article>
+        </div>
+
+        <!-- PLANT FILTER -->
+        <aside class="sidebar-left">
+          
+          <form id="filter" action="/show/filter">
+
+              <select class="example" name="light" required>
+                    <option name="" value="" selected>Light Level</option>
+                    <option name="table1" value="1"> 1</option>
+                    <option name="table2" value="2"> 2</option>
+                    <option name="table3" value="3"> 3</option>
+              </select>
+              
+              <select class="example" name="price" required>
+                <option name="" value="" selected>Price</option>
+                <option name="table1" value="1"> 1</option>
+                <option name="table2" value="2"> 2</option>
+                <option name="table3" value="3"> 3</option>
+                <option name="table3" value="4"> 4</option>
+              </select>
+              
+              <input type="submit" value="go">
+              
+          </form>
 
       
-      <footer>
-        Footer
-        <article>
-          images from https://moderngarden.co/
+          <form method="get" action="/">
+            <button class="button" type="submit">Clear Search</button>
+          </form>
+
+        </aside>
+      
+
+
+        <article class="search-results_box">
+          <section>
+            <ul class="plant-item_container">
+              <% plants.forEach(plant => { %>
+              <li class="plant-item">
+                  <a href="/show/<%= plant._id %>"> <%= plant.name %></a>
+              </li>
+              <div>
+                <img src="<%=plant.image%>"/>
+              </div>
+              <% })%>
+            </ul> 
+          </section>
         </article>
-      </footer>
-    <!-- <h1>Search for your plant</h1>
-    <header></header>
-    <nav>
-        <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li>
-                <input type="checkbox" value="Search" label="label"/>
-            </li>
-        </ul>
-    </nav> -->
-</section>
 
-
-    <!-- <form action="" method="GET">
         
-        <div>
-        <p>* Icons for ease of care *</p><input type="checkbox" value="Search" label="label"/>
-        </div>
-        
-        
-
-
-        <br>
-        <br>
-        <input type="checkbox" value="Search">Test </input>
-        <input type="checkbox" value="Search">Test </input>
-        <br>
-
-        <input type="button" value="Submit Changes">
-        </form>
-
-        <br>
-
-      <a href="/findmyplant">Clear Search</a>
-
-
-      <p>There are no plants that fit this criteria</p> -->
-     
+        <footer>
+          <article>
+            Copyright© images from https://moderngarden.co/
+          </article>
+        </footer>
+      <!-- <h1>Search for your plant</h1>
+      <header></header>
+      <nav>
+          <ul>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+              <li>
+                  <input type="checkbox" value="Search" label="label"/>
+              </li>
+          </ul>
+      </nav> -->
+  </section>     
 
 </body>
 </html>
