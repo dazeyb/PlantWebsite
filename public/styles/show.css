@@ -261,6 +261,8 @@ header {
 
         margin-left: 50px;
         padding-left: 20px;
+
+        position: relative;
         /* display: flex; */
     }
 
@@ -280,7 +282,19 @@ header {
         font-weight: 700px;
         border: none;
         font-size: 17px;
+        padding: 5px 8px 5px 8px;
+        margin: 10px;
+
+        border-radius: 10px;
+        border-style: solid 1px #504239;
     }
+
+    .delete-comment:hover, .edit-comment_anchor:hover {
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
 
     .edit-comment_anchor {
         color: #504239;
@@ -288,7 +302,17 @@ header {
         font-weight: 700px;
         border: none;
         font-size: 17px;
+        padding: 5px 8px 5px 8px;
+        margin: 10px;
+
+        border-style: solid 1px #504239;
+        border-radius: 10px;
+
     }
+
+
+
+
 
     .comment-form {
         padding: 13px;
