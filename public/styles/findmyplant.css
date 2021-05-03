@@ -276,18 +276,23 @@ article {
         border: 20px solid lightcoral;
 }
 
-        .plant-item_container {
+        .plant-flex_box {
             display: flex;
             flex-wrap: wrap;
+            flex-direction: row;
         }
 
-            .plant-img_div{
+            .plant-item_container {
 
             }
 
-            .plant-item {
-                list-style: none;
-            }
+                .plant-img_div{
+                    max-block-size: 30px 30px;
+                }
+
+                .plant-text {
+                    list-style: none;
+                }
 
 
 
