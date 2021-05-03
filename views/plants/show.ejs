@@ -38,7 +38,6 @@
   
             <form class="searchbar navbutton button" action="/show/search" method="GET">
   
-  
               <input class="search-box_field" type="text" name="name" placeholder="Plant Name" />
               <input class="search-box_button button" type="submit" value="Search"/>
   
@@ -84,14 +83,12 @@
                     
                     <!-- Forms can only do POST or GET, so we need to dictate a method before to ovverride (via method ovverride, in this case we don't need a method -->
                   <form action="/show/<%=review._id%>/<%=Plant._id%>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete Comment" />
+                    <input class="delete-comment" type="submit" value="Delete Comment" />
                   </form>
                   
                   <!-- Edit button currently causing delete as well-->
-                  <a href="/show/<%= review._id%>/<%=Plant.id%>/edit">Edit</a>
-                  <ul>
-                      <!-- <li>Comment: <%= review.comment %></li> -->
-                  </ul>
+                  <a class="edit-comment_anchor" href="/show/<%= review._id%>/<%=Plant.id%>/edit">Edit</a>
+
                     
                     <!-- <form action="/show/<%=review._id%>/<%=Plant._id%>?_method=PUT" method="POST">
                       <input type="submit" value="Update">
@@ -104,8 +101,8 @@
                 </div>
                 
                 <form action="/show/<%= Plant._id %>" method="POST">
-                  <input name="comment" type="string" placeholder="Comments"/>
-                  <input type="submit" value="Submit"/>
+                  <input class="comment-form" name="comment" type="string" placeholder="Comments"/>
+                  <input class="comment-submit" type="submit" value="Submit"/>
                 </form>
                 
             </div>
