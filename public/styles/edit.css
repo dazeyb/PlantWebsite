@@ -221,16 +221,37 @@ header {
 
         justify-content: center;
 
-        margin: 100px 0 394px 450px;
+        margin: 100px 0 330px 450px;
     }
 
-        .edit-form{
-            padding: 10px;
+        .edit-form {
+            padding: 20px;
             font-weight: 100;
-            color: #ccccbf;
-            background-color: #3a5840;;
-            border-radius: 25px;
+            color: #5e502b;
+            background-color: #ceccb8;
+            border-radius: 28px 0 0 28px;
+            font-size: 25px;
         }
+
+        .edit-submit_button {
+            padding: 20px ;
+            font-weight: 100;
+            color: #5e502b;
+            background-color: #ceccb8;
+            border-radius: 0 28px 28px 0;
+            font-size: 25px;
+            text-transform: capitalize;
+        }
+
+        .edit-submit_button:hover {
+            cursor: pointer;
+            padding: 21px;
+            font-size: 32px;
+            color: #244417;
+            background-color: #a19f82;
+            
+        }
+
 
 
     /* -------------------------------------------------------------------------------------------- */
@@ -243,6 +264,6 @@ footer {
 
     color: #44362d;
     background-color: #ADC178;
-    padding: 20px 0 20px 0;
+    padding: 20px 0px 20px 20px;
 }
 
