@@ -166,26 +166,34 @@ header {
         
         .search-box_button {
             /* Text Search in Navbar */
-            color: #504239;
+            /* color: #504239;
             background-color:#c5ceab;
             font-weight: 700px;
             border: none;
-            font-size: 17px;
+            font-size: 17px; */
+            /* padding: 5px; */
+            font-weight: 100;
+            color: #5e502b;
+            background-color: #ceccb8;
+            padding: 6px 6px 3px 6px;
+
         }
         
             .search-box_button:hover {
                 font-weight: 600;
+                font-size: 19px;
+                color: #bbb090;
+                background-color: rgb(36, 71, 26);
             }
 
 
-        search-box_field {
-            background-color: #f5f4f0;
-            border: none;
-        }
-
-/* -------------------------------------------------------------------------------------------- */
-
-  
+            .search-box_field {
+                font-weight: 100;
+                color: #5e502b;
+                background-color: #ceccb8;
+                font-size: 19px;
+                /* padding: 1px; */
+            }
 
 /* -------------------------------------------------------------------------------------------- */
 

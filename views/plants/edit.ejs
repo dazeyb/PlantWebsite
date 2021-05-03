@@ -34,7 +34,7 @@
 			
 				<form class="searchbar navbutton button" action="/show/search" method="GET">
 			
-					<input class="search-box_field" type="text" name="name" placeholder="Plant Name" />
+					<input class="search-box_field" type="text" name="name" placeholder="   Plant Name" />
 					<input class="search-box_button button" type="submit" value="Search"/>
 			
 				</form>
@@ -44,7 +44,7 @@
 		
 				<div class="description">
 		
-					<h1>Edit <%= review.comment %></h1>
+					<h1>The comment to be replaced is "<%= review.comment %>".</h1>
 						
 					<div class="description-box">
 						
@@ -55,7 +55,7 @@
 									type="text"
 									value="<%= review.comment %>"/>
 									
-								<input class="edit-submit_button" type="submit" value="Submit Changes" />
+								<input class="edit-submit_button" type="submit" value="Submit" />
 						</form>
 							
 					</div>
