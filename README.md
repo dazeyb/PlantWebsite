@@ -14,6 +14,9 @@ Alternatively you can type a plant name into the search bar and it will take you
 
 * Plant page/Commenting
 
+<img class="fillerphoto" src="https://i.imgur.com/DfunhyX.png"/>
+<img class="fillerphoto" src="https://i.imgur.com/59WxkUp.png"/>
+
 From the plants page, you can view and create comments at the bottom of the page by clicking add comment/review.
 This will bring up a modal that will ask for you to review the plant, and write a comment/review.
 You will submit by pressing the submit.
