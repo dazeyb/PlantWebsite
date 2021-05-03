@@ -52,6 +52,10 @@ a  {
     text-decoration: none;
 }
 
+a:hover {
+
+}
+
 .button {
     font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
@@ -301,22 +305,21 @@ article {
                     border: 1px solid rgba(0, 0, 0, .3);
                     position: relative;
                     overflow: hidden;
-                    margin: 20px;
+                    margin: 30px;
                 }
             
                 .plant-img_div{
                     /* height: 40px;
                     object-fit: cover;
                     object-position: center center; */
-                    padding: 10px;
+                    /* padding: 10px; */
                     background: #eee;
-                    text-align: center;
                     position: relative;
                 }
                     
                     .plant-img {
-                        height: 150px;
-                        width: 200px;
+                        height: 400px;
+                        width: auto;
                         object-fit: cover;
                         display: block;
                         position: center;
@@ -326,13 +329,16 @@ article {
                         /* list-style: none; */
                         /* text-transform: capitalize; */
                         padding: 10px;
+                        text-align: center;
                     }
                     
                     .plant-text_anchor {
-                        color: #666;
+                        color: #81695a;
                         font-size: 20px;
-                        padding: 10px;
+                        /* padding: 10px; */
                         text-decoration: none;
+                        font-family: 'Spectral', serif;
+                        font-weight: 50;
                     }
 
 
