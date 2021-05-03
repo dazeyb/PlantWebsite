@@ -1,31 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Blog | Articles</title>
-	</head>
+	<html lang="en">
+	  <link rel="stylesheet" href="/styles/edit.css">
+	
+	
+	  <head>
+		  <meta charset="UTF-8">
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		  <link rel="preconnect" href="https://fonts.gstatic.com">
+		  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@800&display=swap" rel="stylesheet">
+		  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+		  <title>Your Plant</title>
+	  </head>
 	<body>
-		<header>
-			<nav>
-				<ul>
-					<li>
-						<a href="/">Home</a>
-                    </li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<h1>Edit <%= review.comment %></h1>
-			<form action="/show/<%=review._id%>/<%=plantid%>?_method=PUT" method="POST">
-					<input
-                        name = "comment"
-                        type="text"
-						value="<%= review.comment %>"
-					/>
-				<input type="submit" value="Done" />
-			</form>
-		</main>
+
+		<section class="grid">
+		
+			<div class="banner">
+			</div>
+				  
+			<header class="navbar">
+					
+					<div class="plantlogo">Leafly
+						<i class="fas fa-seedling"></i>
+					</div>
+						
+						
+				<a href="/"><button class="home-button navbutton button">Home</button></a>
+						
+				
+				<a href="https://saveplants.org/"><button class="conservation-button navbutton button">Conservation</button></a>
+			
+			
+				<form class="searchbar navbutton button" action="/show/search" method="GET">
+			
+					<input class="search-box_field" type="text" name="name" placeholder="   Plant Name" />
+					<input class="search-box_button button" type="submit" value="Search"/>
+			
+				</form>
+		  
+			</header>
+		  		
+		
+				<div class="description">
+		
+					<h1>The comment to be replaced is "<%= review.comment %>".</h1>
+						
+					<div class="description-box">
+						
+							<form action="/show/<%=review._id%>/<%=plantid%>?_method=PUT" method="POST">
+								<input
+									class="edit-form"
+									name = "comment"
+									type="text"
+									value="<%= review.comment %>"/>
+									
+								<input class="edit-submit_button" type="submit" value="Submit" />
+						</form>
+							
+					</div>
+
+				</div>
+					
+					
+					<footer>
+						Copyright© images from https://moderngarden.co/
+					</footer>
+					
+		</section>
+				
 	</body>
 </html>

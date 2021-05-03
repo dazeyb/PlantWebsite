@@ -1,30 +1,91 @@
-body {
-    background-color: #C9E4CA;
-    font-family: 'Spectral', serif;
-}
+/* Nav button inspiration from https://codepen.io/davidicus/pen/emgQKJ */
+
+/* Make buttons not turn purple on click */
+
+/* Make buttons linking to amazon on donation */
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 
 .grid {
-    color: brown;
     display: grid;
-    grid-template-columns: 200px auto;
-    grid-template-rows: repeat(4, 100px);
-    grid-gap: 1em;
+    grid-template-columns: 19% auto;
+    /* grid-template-rows: repeat(5, auto); */
+    grid-template-rows: 68px 97px;
+    grid-gap: 0em;
     grid-template-areas: "banner banner"
                          "header header"
+                         "fillerphoto-box fillerphoto-box"
                          "sidebar-1 article"
                          "footer footer";
+
+    min-height: 100%;
 }
+
+
+body {
+    background-color:#f0ede3;
+    /* font-family: 'Spectral', serif; */
+    font-family: 'Work Sans', sans-serif;
+    
+}
+
+* {
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+    text-decoration: none;
+    
+    
+    /* Moves almost everything to edges, might cause issues later. Placing these properties in other elements didn't work */
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    margin-top: 0;
+
+    box-sizing: border-box;
+    
+    /* max-width: 100%; */
+}
+
+a  {
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 31px;
+    color: rgb(31, 66, 31);
+}
+
+.button {
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.button:hover, a:hover  {
+    cursor: pointer;
+}
+
 
 .banner {
     grid-row: 1;
     grid-column: 1 / 3;
     grid-area: banner;
 
-    color: rgb(18, 214, 0);
+    background-color: #ADC178;
 
     min-width: 100%;
     max-height:100%;
+
+    box-sizing: border-box;
+    display: box;
+    margin-inline-start: 0px;
 }
+
+    .banner-body {
+    }
 
 
 header {
@@ -33,99 +94,313 @@ header {
     grid-column: 1 / 3;
     grid-area: header;
 
-
-    /* list-style-type: none; */
-    /* border-width: 2px; 
-    border-color: rgb(51, 51, 51);
-    padding: 5px; */
-    border: 3px solid brown;
-    /* row-gap: 20px; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     align-items: center;
+    height: 60px;
+    box-sizing: border-box;
 }
+
+/* -------------------------------------------------------------------------------------------- */
 
 .navbar {
-}
 
-.fa-leaf {
-    font-size: 200px;
-    color: black;
-}
-.fa-spa {
-    font-size: 200px;
-    color: black;
-}
+    /* These actually keep the elements in a line, not sure how with grid as well */
+    display: flex;
+    flex-direction: row;
 
-.navbutton {
-    background-color:  #C9E4CA;
-    border: none;
-}
-
-.home-button {
+    /* justify-content: space-between; */
+    text-decoration: none;
+    width: 100%;
+    letter-spacing: 0;
     justify-content: left;
+    grid-gap: 6em;
 }
 
-.findmyplant-button {
-    justify-content: center;
+    .plantlogo {
+        margin: 32px 0 0 60px;
+        font-size: 45px;
+        font-family: 'Spectral', serif;
+        color: #6C584C;
+
+    }
+
+    .fa-seedling {
+        font-size: 40px;
+        color: #aac560;
+        margin: 15px 0 0 5px;
+    }
+    
+    
+    .navbutton {
+        /* background-color:  #b5e0b6; */
+        margin: 32px 0 0 0;
+        padding: 1em; 
+        text-align: center;
+        background:#f0ede3;
+        border: none;
+        font-size: 17px;
+    }
+    
+     .navbutton:hover, .navbutton:active {
+         letter-spacing: 6px;
+         font-weight: 600;
+    }
+    
+    
+        .home-button {
+            color: #6C584C;
+
+        }
+        
+        .conservation-button {
+            color: #6C584C;
+        }
+        
+        .searchbar {
+            color: #6C584C;
+            border: none;
+            /* background-color: #f0ede3; */
+            background: none;
+        }
+        
+        .searchbutton {
+            color: #6C584C;
+            background: none;  
+        }
+        
+        .searchbutton:hover {
+            color: #504239;
+            border-style: groove;
+        }
+        
+        .search-box_button {
+            /* Text Search in Navbar */
+            color: #504239;
+            background-color:#c5ceab;
+            font-weight: 700px;
+            border: none;
+            font-size: 17px;
+        }
+        
+            .search-box_button:hover {
+                font-weight: 600;
+            }
+
+
+        search-box_field {
+            background-color: #f5f4f0;
+            border: none;
+        }
+
+/* -------------------------------------------------------------------------------------------- */
+
+    .fillerphoto-box {
+        grid-row: 3;
+        grid-column: 1 / 3;
+        grid-area: fillerphoto-box;
+
+
+        max-height: 800px;
+/* 
+        overflow-y: hidden; */
+
+        box-sizing: border-box;
+        height: 400px;
+
+
+        /* min-width: 100%;
+        max-height: 30%;
+
+                
+        justify-items: center;
+        align-content: stretch; */
 }
 
-.searchbar {
-    justify-content: right;
-}
+     .photo-wrapper {
+        position: relative;
+        text-align: center;
+    } 
 
-.button {
-    font-family: 'Spectral', serif;
-    width: 80px;
-    text-transform: uppercase;
-}
+        .fillerphoto {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+        }
+/* 
 
-.button:hover {
-    cursor: pointer;
-    font-weight:400;
-}
+        .text-background {
+            background-color: #f0ede3;
+            border: solid 4px #f0ede3;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+        } */
+
+            .img-text {
+                font-size: 70px;
+                position: absolute;
+                top: 31%;
+                left: 40%;
+                font-family: 'Spectral', serif;
+                font-stretch: wider;
+                background-color: rgba(0, 0, 0, .5);
+                color: #dacdc0;
+
+                padding: 0 25px;
+
+            }
+
+
+/* -------------------------------------------------------------------------------------------- */
+
 
 .sidebar-left {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 1 / 2;
     grid-area: sidebar-1;
 
-    border: 3px solid rgb(6, 61, 145);
+    height: auto;
 }
+
+    .search-filter_container {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 0 0 25px;
+        /* padding: 10px; */
+    }
+    
+    .example {
+        font-size: 30px;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 30px;
+        padding: 10px 20px 10px 20px;
+        margin: 13px;
+        letter-spacing: 2px;
+        color: #3a5840;
+        background-color: #ccccbf;
+        
+        border-radius: 24px;
+        }
+    
+        .example:hover {
+            color: #c5d8af;
+            background-color: #998374;
+        }
+
+        .search-filter_button {
+            margin: 75px 0 0 13px;
+            font-size: 27px;
+        }
+
+        .search-clear_button {
+            margin: 25px 0 0 13px;
+            font-size: 27px;
+        }
+
+        .search-filter_button, .search-clear_button {
+            padding: 15px;
+            font-weight: 100;
+            color: #ccccbf;
+            background-color: #776d62;
+            border-radius: 25px;
+            /* justify-content: center; */
+        }
+
+        .search-clear_button:hover {
+            color: #fcfcdd;
+            background-color: #61332b;
+        }
+        
+        .search-filter_button:hover {
+            color: #e9e9c5;
+            background-color: #3a5840;
+        }
+    /* .fa-tint {
+        font-size: 30px;
+        color: blue;
+    } */
+
+/* -------------------------------------------------------------------------------------------- */
+
 
 article {
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 2 / 3;
     grid-area: article;
+    height: auto;
+
+
 }
 
-
-
-.plant-item_container {
-    display: flex;
-    gap: 40px;
+    .search-filter_box {
 }
 
-.plant-item {
-    flex-wrap: wrap;
-    list-style: none;
-}
+        .plant-flex_box {
+            /* flex-wrap: wrap;
+            flex-direction: row; */
 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+            .plant-item_container {
+                    /* display:inline-flex; */
+                    flex: 1 1 300px;
+                    border: 1px solid rgba(0, 0, 0, .3);
+                    position: relative;
+                    overflow: hidden;
+                    margin: 33px;
+                }
+            
+                .plant-img_div{
+                    /* height: 40px;
+                    object-fit: cover;
+                    object-position: center center; */
+                    /* padding: 10px; */
+                    background: #eee;
+                    position: relative;
+                }
+                    
+                    .plant-img {
+                        height: 400px;
+                        width: auto;
+                        object-fit: cover;
+                        display: block;
+                        position: center;
+                    }
+                    
+                    .plant-text {
+                        /* list-style: none; */
+                        /* text-transform: capitalize; */
+                        padding: 10px;
+                        text-align: center;
+                    }
+                    
+                    .plant-text_anchor {
+                        color: #81695a;
+                        font-size: 20px;
+                        /* padding: 10px; */
+                        text-decoration: none;
+                        font-family: 'Spectral', serif;
+                        font-weight: 50;
+                    }
 
 
 /** express blog for query params **/
 /** Example on fruits app for wrapping things **/
   
 footer {
-    grid-row: 4;
+    grid-row: 5;
     grid-column: 1 / 3;
     grid-area: footer;
 
-    border: 3px solid brown;
-    padding-top: 10px;
+    color: #44362d;
+    background-color: #ADC178;
+    padding: 20px 0 0 0;
 }
 
-a {
-    text-decoration: none;
-}

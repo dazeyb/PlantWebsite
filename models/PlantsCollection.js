@@ -5,9 +5,11 @@ const plantsSchema = new mongoose.Schema(
 		name: { type: String, required: true, minLength: 1 },
 		description: { type: String, required: true, minLength: 1 },
 		light: { type: Number },
-        //temp: { type: int, required: true, default: 0},
+        image: {type: String},
+		water: {type: Number},
+   		humidity: {type: Number},
         price:  { type: Number },
-        rating: { type: Number, default: 3 }, //will be updated with every review in array
+        //rating: { type: Number, default: 3 }, //will be updated with every review in array
         reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: "ReviewsCollection" }]
 	},
 	{ timestamps: true }
