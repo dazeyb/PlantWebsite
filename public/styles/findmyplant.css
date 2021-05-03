@@ -31,7 +31,8 @@ body {
     color: brown;
     display: grid;
     grid-template-columns: 29% auto;
-    grid-template-rows: repeat(5, 100px);
+    /* grid-template-rows: repeat(5, auto); */
+    grid-template-rows: 8% 13%;
     grid-gap: 0em;
     grid-template-areas: "banner banner"
                          "header header"
@@ -44,7 +45,7 @@ body {
 
 .banner {
     grid-row: 1;
-    grid-column: 1 / -1;
+    grid-column: 1 / 3;
     grid-area: banner;
 
     background-color: #ADC178;
@@ -64,10 +65,8 @@ body {
 header {
     /* Orientation */
     grid-row: 2;
-    grid-column: 1 / -1;
+    grid-column: 1 / 3;
     grid-area: header;
-
-    border: 3px solid rgb(0, 0, 0);
 
     /* justify-content: space-evenly; */
     align-items: center;
@@ -104,7 +103,7 @@ header {
     
     .navbutton {
         /* background-color:  #b5e0b6; */
-        padding: 1em;
+        padding: 1em; 
         text-align: center;
         background:#f0ede3;
         border: none;
@@ -112,6 +111,7 @@ header {
     
      .navbutton:hover, .navbutton:active {
          letter-spacing: 6px;
+         font-weight: 600;
     }
     
     
@@ -127,16 +127,18 @@ header {
         .searchbar {
             color: #6C584C;
             border: none;
-            background-color: #f0ede3;  
+            /* background-color: #f0ede3; */
+            background: none;  
         }
         
         .searchbutton {
             color: #6C584C;
-            border: none;
+            background: none;  
         }
         
         .searchbutton:hover {
             color: #504239;
+            border-style: groove;
             }
             
             .searchfield {
@@ -148,16 +150,18 @@ header {
 
     .fillerphoto-box {
         grid-row: 3;
-        grid-column: 1 / -1;
+        grid-column: 1 / 3;
         grid-area: fillerphoto-box;
-            
-        box-sizing: border-box;
+
 
         border: solid rgb(102, 105, 255);
 
         max-height: 800px;
+/* 
+        overflow-y: hidden; */
 
-        overflow-y: hidden;
+        box-sizing: border-box;
+        height: 400px;
 
 
         /* min-width: 100%;
@@ -177,7 +181,6 @@ header {
             width: 100%;
             height: 400px;
             object-fit: cover;
-            /* object-position:  */
             object-position: center bottom;
         }
 
@@ -205,6 +208,8 @@ img {
     grid-area: sidebar-1;
     
     border: 3px solid rgb(6, 61, 145);
+
+    height: auto;
 }
 
 
@@ -212,6 +217,7 @@ article {
     grid-row: 4;
     grid-column: 2 / 3;
     grid-area: article;
+    height: auto;
 
 
 }
