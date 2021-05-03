@@ -60,14 +60,15 @@
 
             <form id="filter" action="/show/filter">
 
-                <select class="example" name="light" required>
-                      <option name="" value="" selected>Light Level</option>
-                      <option name="table1" value="1"> 1</option>
-                      <option name="table2" value="2"> 2</option>
-                      <option name="table3" value="3"> 3</option>
-                </select>
+            <select class="example" name="light" required>
+              <option name="" value="" selected>Light Level</option>
+              <option name="table1" value="1"> 1</option>
+              <option name="table2" value="2"> 2</option>
+              <option name="table3" value="3"> 3</option>
+            </select>
                 
-                <select class="example" name="price" required>
+                <!-- Ron had this in and I'm not sure why -->
+                <!-- <select class="example" name="price" required>
                   <option name="" value="" selected>Price</option>
                   <option name="table1" value="1"> 1</option>
                   <option name="table2" value="2"> 2</option>
@@ -75,19 +76,20 @@
 
                   <option name="table4" value="4"> 4</option>
                   <option name="table5" value="5"> 5</option>
-            </select>
+                </select> -->
             <br> 
             <select class="example" name="water" required>
-              <option name="" value="" selected>water</option>
+              <option name="" value="" selected>Water</i></option>
               <option name="table1" value="1"> 1</option>
               <option name="table2" value="2"> 2</option>
               <option name="table3" value="3"> 3</option>
               <option name="table4" value="4"> 4</option>
               <option name="table5" value="5"> 5</option>
+              <!-- <i class="fas fa-tint"></i>  Did not work -->
             </select>
             <br> 
             <select class="example" name="humidity" required>
-              <option name="" value="" selected>humidity</option>
+              <option name="" value="" selected>Humidity</option>
               <option name="table1" value="1"> 1</option>
               <option name="table2" value="2"> 2</option>
               <option name="table3" value="3"> 3</option>
@@ -106,7 +108,7 @@
             <br> 
 
             
-            <input type="submit" value="go">
+            <input type="submit" value="Search">
             
         </form>
 

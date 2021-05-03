@@ -4,31 +4,6 @@
 
 /* Make buttons linking to amazon on donation */
 
-
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
-
-body {
-    background-color:#f0ede3;
-    /* font-family: 'Spectral', serif; */
-    font-family: 'Work Sans', sans-serif;
-
-}
-
-* {
-    transition-property: all;
-    transition-duration: .6s;
-    transition-timing-function: ease;
-    text-decoration: none;
-
-
-    /* Moves almost everything to edges, might cause issues later. Placing these properties in other elements didn't work */
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    margin-top: 0;
-
-    /* max-width: 100%; */
-  }
-
 .grid {
     display: grid;
     grid-template-columns: 19% auto;
@@ -43,6 +18,45 @@ body {
 
     min-height: 100%;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+body {
+    background-color:#f0ede3;
+    /* font-family: 'Spectral', serif; */
+    font-family: 'Work Sans', sans-serif;
+    
+}
+
+* {
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
+    text-decoration: none;
+    
+    
+    /* Moves almost everything to edges, might cause issues later. Placing these properties in other elements didn't work */
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    margin-top: 0;
+    
+    /* max-width: 100%; */
+}
+
+a,  {
+    text-align: center;
+}
+
+.button {
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.button:hover, a:hover  {
+    cursor: pointer;
+}
+
 
 .banner {
     grid-row: 1;
@@ -75,6 +89,7 @@ header {
     box-sizing: border-box;
 }
 
+/* -------------------------------------------------------------------------------------------- */
 
 .navbar {
 
@@ -161,6 +176,7 @@ header {
             border: none;
         }
 
+/* -------------------------------------------------------------------------------------------- */
 
     .fillerphoto-box {
         grid-row: 3;
@@ -217,19 +233,12 @@ header {
                 color: #776d62;
             }
 
-.button {
-    font-family: 'Work Sans', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-}
+/* -------------------------------------------------------------------------------------------- */
 
-.button:hover, a:hover  {
-    cursor: pointer;
-}
 
-a,  {
-    text-align: center;
-}
+
+/* -------------------------------------------------------------------------------------------- */
+
 
 .sidebar-left {
     grid-row: 4;
@@ -245,6 +254,14 @@ a,  {
         display: flex;
         flex-direction: column;
     }
+
+    /* .fa-tint {
+        font-size: 30px;
+        color: blue;
+    } */
+
+/* -------------------------------------------------------------------------------------------- */
+
 
 article {
     grid-row: 4;
