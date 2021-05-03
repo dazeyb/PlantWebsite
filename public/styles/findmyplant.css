@@ -240,11 +240,15 @@ header {
             .img-text {
                 font-size: 70px;
                 position: absolute;
-                top: 10%;
-                left: 45%;
+                top: 31%;
+                left: 40%;
                 font-family: 'Spectral', serif;
                 font-stretch: wider;
-                color: #776d62;
+                background-color: rgba(0, 0, 0, .5);
+                color: #dacdc0;
+
+                padding: 0 25px;
+
             }
 
 
