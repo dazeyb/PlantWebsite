@@ -83,6 +83,8 @@ Description describing plant in a separate section.
 
 * ===== * On DB: Collection for Plants 
 
+<img class="fillerphoto" src="https://i.imgur.com/HFSGwS2.png"/>
+
 * Name: string
 
 * Temperature: string 45-65
