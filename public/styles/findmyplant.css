@@ -45,8 +45,11 @@ body {
     /* max-width: 100%; */
 }
 
-a,  {
+a  {
     text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .button {
@@ -172,6 +175,11 @@ header {
             border: none;
             font-size: 17px;
         }
+        
+            .search-box_button:hover {
+                font-weight: 600;
+            }
+
 
         search-box_field {
             background-color: #f5f4f0;
@@ -235,9 +243,6 @@ header {
                 color: #776d62;
             }
 
-/* -------------------------------------------------------------------------------------------- */
-
-
 
 /* -------------------------------------------------------------------------------------------- */
 
@@ -299,22 +304,25 @@ article {
                     margin: 20px;
                 }
             
-                .plant-item_container .plant-img_div{
+                .plant-img_div{
                     /* height: 40px;
                     object-fit: cover;
                     object-position: center center; */
                     padding: 10px;
                     background: #eee;
                     text-align: center;
-
-                    .plant-item_container .plant-img_div, plant-img {
-                        height: 200px;
-                        width: 250px;
-                        object-fit: cover;
-                        filter: drop-shadow(0 3px 5px rgba(0, 0, 0, .7));
-
+                    position: relative;
+                }
                     
-                    .plant-item_container .plant-text {
+                    .plant-img {
+                        height: 150px;
+                        width: 200px;
+                        object-fit: cover;
+                        display: block;
+                        position: center;
+                    }
+                    
+                    .plant-text {
                         /* list-style: none; */
                         /* text-transform: capitalize; */
                         padding: 10px;
@@ -324,6 +332,7 @@ article {
                         color: #666;
                         font-size: 20px;
                         padding: 10px;
+                        text-decoration: none;
                     }
 
 
