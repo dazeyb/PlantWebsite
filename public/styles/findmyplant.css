@@ -82,7 +82,7 @@ header {
     display: flex;
     flex-direction: row;
 
-    justify-content: space-between;
+    /* justify-content: space-between; */
     text-decoration: none;
     width: 100%;
     letter-spacing: 0;
@@ -117,18 +117,17 @@ header {
     
         .home-button {
             color: #6C584C;
+
         }
         
         .findmyplant-button {
-            justify-content: center;
             color: #6C584C;
         }
         
         .searchbar {
-            justify-content: right;
             color: #6C584C;
             border: none;
-            background-color: #f0ede3;   
+            background-color: #f0ede3;  
         }
         
         .searchbutton {
@@ -156,7 +155,7 @@ header {
 
         border: solid rgb(102, 105, 255);
 
-        max-height: 400px;
+        max-height: 800px;
 
         overflow-y: hidden;
 
@@ -214,7 +213,7 @@ article {
     grid-column: 2 / 3;
     grid-area: article;
 
-    
+
 }
 
     .search-results_box {
