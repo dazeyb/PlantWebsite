@@ -10,16 +10,20 @@
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@800&display=swap" rel="stylesheet">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-      <title>Find My Plant</title>
+      <title>Your Plant</title>
   </head>
-    <title>ShowPageWorking</title>
+
 </head>
 <body>
 
     <section class="grid">
         
+
+
         <div class="banner">
         </div>
+
+
       
         <header class="navbar">
             
@@ -40,17 +44,28 @@
   
             </form>
   
-          </header>
+        </header>
   
-          
+
+
+          <div class="photo">
           
             <div>
               <img src="<%=Plant.image%>"/>
             </div>
-            <section>
+
+          </div>
+
+
+
+
+          <div class="description">
+
+            <h1><%=Plant.name%></h1>
+
               <h2>Plant Attributes:</h2>
+
               <ul>
-                <!-- image -->
                 <li>Name: <%=Plant.name%></li>
                 <li>Light: <%=Plant.light%></li>
                 <li>Water: <%=Plant.water%></li>
@@ -58,46 +73,47 @@
                 <li>Price: <%=Plant.price%></li>
                 <li>Description: <%=Plant.description%></li>
                 
+                <br>
+
                 <li>Comments: </li>
-                <% Plant.reviews.forEach(review => { %>   <% console.log(review) %>
-                  <li><%=review.comment%></li>
+                  <% Plant.reviews.forEach(review => { %>   <% console.log(review) %>
+                <li><%=review.comment%></li>
                   
                   
                   <!-- Forms can only do POST or GET, so we need to dictate a method before to ovverride (via method ovverride, in this case we don't need a method -->
-                  <form action="/show/<%=review._id%>/<%=Plant._id%>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete Comment" />
-                  </form>
-                  <!-- Edit button currently causing delete as well-->
-                  <a href="/show/<%= review._id%>/<%=Plant.id%>/edit">Edit</a>
-                  <ul>
+                <form action="/show/<%=review._id%>/<%=Plant._id%>?_method=DELETE" method="POST">
+                  <input type="submit" value="Delete Comment" />
+                </form>
+                 
+                <!-- Edit button currently causing delete as well-->
+                <a href="/show/<%= review._id%>/<%=Plant.id%>/edit">Edit</a>
+                <ul>
                     <!-- <li>Comment: <%= review.comment %></li> -->
-                  </ul>
-                  
-                  
+                </ul>
                   
                   <!-- <form action="/show/<%=review._id%>/<%=Plant._id%>?_method=PUT" method="POST">
                     <input type="submit" value="Update">
                     
                   </form> -->
                   <%})%>
+
                 </ul>
                 
                 
-      <form action="/show/<%= Plant._id %>" method="POST">
-        <input name="comment" type="string" placeholder="Comments"/>
-        <input type="submit" value="Submit"/>
-      </form>
-      
+                <form action="/show/<%= Plant._id %>" method="POST">
+                  <input name="comment" type="string" placeholder="Comments"/>
+                  <input type="submit" value="Submit"/>
+                </form>
+                
+            </div>
+  
+
+      <footer>
+          Copyright© images from https://moderngarden.co/
+      </footer>
+
+
     </section>
-    
-    <h1><%=Plant.name%></h1>
-
-
-    <footer>
-      <article>
-        Copyright© images from https://moderngarden.co/
-      </article>
-    </footer>
 
   </body>
 </html>
