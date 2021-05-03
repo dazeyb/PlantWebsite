@@ -26,7 +26,7 @@
           
           <a href="/"><button class="home-button navbutton button">Home</button></a>
           
-          <a href="https://saveplants.org/"><button class="findmyplant-button navbutton button">Conservation</button></a>
+          <a href="https://saveplants.org/"><button class="conservation-button navbutton button">Conservation</button></a>
 
 
           <form class="searchbar navbutton button" action="/show/search" method="GET">
@@ -53,34 +53,38 @@
             </div>
         </div>
 
-        <!-- PLANT FILTER -->
+        <!-- PLANT SEARCH FILTER -->
         <aside class="sidebar-left">
           
-          <form id="filter" action="/show/filter">
+            <div class="search-filter_container">
 
-              <select class="example" name="light" required>
-                    <option name="" value="" selected>Light Level</option>
-                    <option name="table1" value="1"> 1</option>
-                    <option name="table2" value="2"> 2</option>
-                    <option name="table3" value="3"> 3</option>
-              </select>
-              
-              <select class="example" name="price" required>
-                <option name="" value="" selected>Price</option>
-                <option name="table1" value="1"> 1</option>
-                <option name="table2" value="2"> 2</option>
-                <option name="table3" value="3"> 3</option>
-                <option name="table3" value="4"> 4</option>
-              </select>
-              
-              <input type="submit" value="go">
-              
-          </form>
+            <form id="filter" action="/show/filter">
 
-      
-          <form method="get" action="/">
-            <button class="button" type="submit">Clear Search</button>
-          </form>
+                <select class="example" name="light" required>
+                      <option name="" value="" selected>Light Level</option>
+                      <option name="table1" value="1"> 1</option>
+                      <option name="table2" value="2"> 2</option>
+                      <option name="table3" value="3"> 3</option>
+                </select>
+                
+                <select class="example" name="price" required>
+                  <option name="" value="" selected>Price</option>
+                  <option name="table1" value="1"> 1</option>
+                  <option name="table2" value="2"> 2</option>
+                  <option name="table3" value="3"> 3</option>
+                  <option name="table3" value="4"> 4</option>
+                </select>
+                
+                <input type="submit" value="go">
+                
+            </form>
+
+        
+            <form method="get" action="/">
+              <button class="button" type="submit">Clear Search</button>
+            </form>
+            
+        </div>
 
         </aside>
       
