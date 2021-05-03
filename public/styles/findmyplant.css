@@ -86,28 +86,33 @@ header {
     text-decoration: none;
     width: 100%;
     letter-spacing: 0;
+    justify-content: left;
+    grid-gap: 6em;
 }
 
     .plantlogo {
-        margin: 0 0 0 40px;
-        font-size: 35px;
+        margin: 15px 0 0 60px;
+        font-size: 45px;
         font-family: 'Spectral', serif;
         color: #6C584C;
 
     }
 
     .fa-seedling {
-        font-size: 30px;
+        font-size: 40px;
         color: #aac560;
+        margin: 15px 0 0 5px;
     }
     
     
     .navbutton {
         /* background-color:  #b5e0b6; */
+        margin: 15px 0 0 0;
         padding: 1em; 
         text-align: center;
         background:#f0ede3;
         border: none;
+        font-size: 17px;
     }
     
      .navbutton:hover, .navbutton:active {
