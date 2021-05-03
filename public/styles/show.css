@@ -239,7 +239,7 @@ header {
     grid-area: description;
     /* height: auto; */
     
-    margin: 40px 0 0 20px;
+    margin: 25px 0 0 20px;
 
 }
 
@@ -264,6 +264,9 @@ header {
 
         position: relative;
         /* display: flex; */
+        overflow: scroll;
+
+        border: 1px solid rgba(0, 0, 0, .3);
     }
 
     li {
@@ -315,7 +318,7 @@ header {
 
 
     .comment-form {
-        padding: 13px;
+        padding: 13px 58% 13px 13px;
         font-weight: 100;
         color: #44391b;
         background-color: #ceccb8;
