@@ -5,7 +5,7 @@ const plants = [
     description: "Dracaena trifasciata is a species of flowering plant in the family Asparagaceae, native to tropical West Africa from Nigeria east to the Congo. It is most commonly known as the snake plant, Saint George's sword, mother-in-law's tongue, and viper's bowstring hemp, among other names.",
     light: 1, 
     water: 1,
-    humidity: 0,
+    humidity: 1,
     price: 2,
     image: "https://cdn.shopify.com/s/files/1/0315/1514/8419/products/Snake-Plant-Laurentii_D-155894.jpg?v=1614703120",
     },
