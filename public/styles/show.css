@@ -273,7 +273,6 @@ footer {
     grid-column: 1 / 3;
     grid-area: footer;
 
-    border: 3px solid rgb(85, 226, 226);
     color: #44362d;
     background-color: #ADC178;
     padding: 20px 0 0 0;

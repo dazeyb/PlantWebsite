@@ -45,21 +45,19 @@
 				<div class="description">
 		
 					<h1>Edit <%= review.comment %></h1>
-					
-				<div class="description-box">
-					
-
-					</form>
-					
-						<form action="/show/<%=review._id%>/<%=plantid%>?_method=PUT" method="POST">
-							<input
-								name = "comment"
-								type="text"
-								value="<%= review.comment %>"
-								/>
-							<input type="submit" value="Done" />
-						</form>
 						
+					<div class="description-box">
+						
+							<form action="/show/<%=review._id%>/<%=plantid%>?_method=PUT" method="POST">
+								<input
+									class="edit-form"
+									name = "comment"
+									type="text"
+									value="<%= review.comment %>"/>
+									
+								<input type="submit" value="Done" />
+						</form>
+							
 					</div>
 
 				</div>
