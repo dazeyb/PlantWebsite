@@ -1,4 +1,4 @@
-# project1
+# Project 1 // Leafly 
 
 User Flow:
 
